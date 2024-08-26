@@ -1,12 +1,7 @@
----
-aggregateService:
-  cityService:
-    city: Спб
----
 <section class="seo-text">
   <div class="container">
     <h1 class="seo-text__title block-title">
-      Ремонтные шипы в {{ aggregateService.cityService.city }}
+      Ремонтные шипы в {{ site.data.aggregateService.cityService.city }}
     </h1>
     <div class="seo-text__content">
       <div class="content-text">
@@ -31,7 +26,7 @@ aggregateService:
         <p>Автовладелец уменьшает затраты на покупку новых зимних шин, сохраняя безопасность вождения в зимний период.
         </p>
         <p>В “Ремшип” вы можете купить ремонтные шипы “Теком”для зимней резины с доставкой по {{
-          aggregateService.cityService.city }} и РФ оптом или в розницу.</p>
+          site.data.aggregateService.cityService.city }} и РФ оптом или в розницу.</p>
       </div>
     </div>
   </div>
