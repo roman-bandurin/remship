@@ -1,0 +1,22 @@
+<section class="main-slider">
+  <div class="preloader"></div>
+  <div class="swiper-container main-slider__inner hidden">
+    <div class="swiper-wrapper">
+      {% for banner in site.data.banners %}
+      <a class="swiper-slide main-slider__slide " href="{{ banner.link }}">
+        <img class="main-slider__image-mobile main-slider__img  lzy_img"
+          data-src="{{ banner.image }}"
+          src="" alt="banner" />
+      </a>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination main-slider__pagination"></div>
+    <div class="swiper-scrollbar main-slider__scrollbar"></div>
+    <div class="container main-slider__navigation">
+      <div class="round-button-outlined__pagination-wrapper">
+        <div class="main-slider__btn-prev round-button-outlined__btn-prev"></div>
+        <div class="main-slider__btn-next round-button-outlined__btn-next"></div>
+      </div>
+    </div>
+  </div>
+</section>

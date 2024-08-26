@@ -1,0 +1,35 @@
+<section class="special-offer">
+  <div class="container">
+    <div class="special-offer__slider swiper-container">
+      <div class="special-offer__wrapper">
+        <h2 class="special-offer__title block-title">
+          Специальные предложения
+        </h2>
+        <div class="round-button-outlined__pagination-wrapper">
+          <div class="special-offer__btn-prev round-button-outlined__btn-prev"></div>
+          <div class="round-button-outlined__pagination"></div>
+          <div class="special-offer__btn-next round-button-outlined__btn-next"></div>
+        </div>
+      </div>
+      <div class="special-offer__list swiper-wrapper">
+        {% for discount in discounts %}
+        <div class="special-offer__link swiper-slide">
+          {% if discount.mainImage %}
+          <div class="special-offer__image-block">
+            <img class="lzy_img" data-src="{{ discount.mainImage }}" src="" alt={{ discount.title }} />
+          </div>
+          {% endif %}
+          <div class="special-offer__text-block">
+            <h3 class="text-block__title">
+              {{ discount.title }}
+            </h3>
+            <a class="special-offer__more-info"
+              href="{{ discount.slug }}">Подробнее</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-scrollbar special-offer__scrollbar"></div>
+    </div>
+  </div>
+</section>
