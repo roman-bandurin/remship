@@ -1,4 +1,4 @@
-{% if (productsViewed | length) > 0 %}
+{% if site.data.products %}
 <section class="other-products">
   <div class="container">
     <div class="other-products__wrapper">
@@ -11,7 +11,7 @@
     </div>
     <div class="swiper-container viewed__slider product-slider">
       <div class="swiper-wrapper other-products__list product-slider__list">
-        {% for product in productsViewed %}
+        {% for product in site.data.products %}
           23
         {% endfor %}
       </div>

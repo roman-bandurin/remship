@@ -12,19 +12,18 @@
         </div>
       </div>
       <div class="special-offer__list swiper-wrapper">
-        {% for discount in discounts %}
+        {% for discount in site.data.discounts %}
         <div class="special-offer__link swiper-slide">
           {% if discount.mainImage %}
           <div class="special-offer__image-block">
-            <img class="lzy_img" data-src="{{ discount.mainImage }}" src="" alt={{ discount.title }} />
+            <img class="lzy_img" data-src="{{ discount.mainImage }}" src="" alt={{ discount.title }} width="100" height="100" />
           </div>
           {% endif %}
           <div class="special-offer__text-block">
             <h3 class="text-block__title">
               {{ discount.title }}
             </h3>
-            <a class="special-offer__more-info"
-              href="{{ discount.slug }}">Подробнее</a>
+            <a class="special-offer__more-info" href="{{ discount.slug }}">Подробнее</a>
           </div>
         </div>
         {% endfor %}
