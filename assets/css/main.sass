@@ -74,93 +74,6 @@ p, ul, ol
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   margin-bottom: 0
 
-  $font-main: 'MontserratRegular'
-
-$fw_100: 100
-$fw_200: 200
-$fw_300: 300
-$fw_400: 400
-$fw_500: 500
-$fw_600: 600
-$fw_700: 700
-$fw_800: 800
-$fw_900: 900
-
-$width-tablet: 768px
-$width-desktop: 1300px
-$width-mobile-only: 767px
-
-$blue: #4198F7
-$blueMenu: #009FE3
-$blueHover: #3BB5E9
-$black: #101C29
-$lightPink: #FDEDED
-$red: #CF4949
-$hoverText: #5D7687
-$grey: #B5B5B5
-$green: #2A881B
-$grey-2: #b7bbbe
-$border-grey: #e2e2e2
-$bg-grey: #F6F6F6
-$text-grey: #696F79
-$text-black: #25252A
-$link-green: #26B946
-$border-grey-2: #CBD3E2
-$bg-light-blue: #F2FBFF
-$bg-grey: #EEEEEE
-
-@mixin text($font-size, $line-height, $font-weight)
-  font-family: 'Montserrat', sans-serif
-  font-style: normal
-  font-size: $font-size
-  font-weight: $font-weight
-  line-height: $line-height
-
-@mixin radioButton
-  position: relative
-  input[type='radio']
-    position: absolute
-    z-index: -1
-    opacity: -1
-
-    & + label
-      @include text(16px, 1.4em, 500)
-      display: inline-flex
-      align-items: flex-start
-      user-select: none
-      cursor: pointer
-
-      &::before
-        margin-right: 5px
-        content: ''
-        display: inline-block
-        width: 20px
-        height: 20px
-        flex-shrink: 0
-        flex-grow: 0
-    &:disabled + label
-      user-select: none
-      pointer-events: none
-      opacity: 0.5
-
-  @media screen and (min-width: 768px)
-    input[type='radio'] + label {
-
-  @media screen and (min-width: 1300px)
-    input[type='radio'] + label 
-      @include text(18px, 1.4em, 500)
-
-@mixin input
-  width: 100%
-  border: 1px solid #CBD3E2
-  border-radius: 6px
-  padding: 18px 22px
-
-  @include text(14px, 17px, 400)
-
-  @media screen and (min-width: 1300px)
-    @include text(18px, 22px, 400)
-
 html, body
   position: relative
   max-width: 100%
@@ -247,7 +160,6 @@ body
   overflow-x: hidden
   margin: 0
   padding: 0
-  font-family: $font-main
   min-width: 320px
 
 a
@@ -280,7 +192,7 @@ textarea
   font-family: "MontserratSemibold", sans-serif
   font-size: 20px
   line-height: 24px
-  color: $black
+  color: black
 
   @media (min-width: 768px)
     font-size: 24px
@@ -391,12 +303,12 @@ input:required
 
     &:not(:last-child)
       &:hover
-        color: $blueMenu
+        color: blue
 
     &:hover
       svg
         path
-          fill: $blueMenu
+          fill: blue
 
     svg
       width: 14px
@@ -414,7 +326,7 @@ input:required
   label
     font-size: 14px
     line-height: 17px
-    color: $text-grey
+    color: grey
     position: relative
 
     input, textarea
@@ -430,7 +342,7 @@ input:required
         border: 1px solid #5D7687
 
       &:focus
-        border: 1px solid $blueHover
+        border: 1px solid blue
 
       &:disabled
         background-color: #CBD3E2
@@ -473,7 +385,7 @@ input:required
       z-index: -1
 
   .help-block
-    color: $red
+    color: red
     font-size: 14px
     line-height: 17px
     margin-top: 5px
@@ -485,9 +397,9 @@ input:required
     align-items: center
   &.error
     label
-      color: $red
+      color: red
     input,textarea
-      border: 1px solid $red
+      border: 1px solid red
     .help-block
       display: block
 
@@ -550,7 +462,7 @@ input[type='number']
 
 input:checked + .checkbox__border
   &:after
-    border-color: $blueMenu
+    border-color: blue
 
 .pagination
   display: flex
@@ -586,7 +498,7 @@ input:checked + .checkbox__border
     font-weight: 600
     font-size: 18px
     line-height: 140%
-    color: $black
+    color: black
     cursor: pointer
     transition: background-color .4s ease
 
@@ -599,7 +511,7 @@ input:checked + .checkbox__border
     color: #fff
 
     &:hover
-      background: $blueHover
+      background: blue
 
   .tui-next, .tui-prev
     display: flex
@@ -721,7 +633,7 @@ input:checked + .checkbox__border
         background-repeat: no-repeat
 
   &:hover
-    background-color: $blueHover
+    background-color: blue
 
     &::before
       background-image: url(../../icons/arrow-white.svg)
@@ -872,7 +784,7 @@ input:checked + .checkbox__border
       margin: 0 10px !important
 
     &.swiper-pagination-bullet-active
-      background: $blueMenu
+      background: blue
   
 
 .main-slider__scrollbar
