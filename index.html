@@ -1,13 +1,20 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
-</html>
+---
+layout: base
+title: Купить ремонтные шипы Теком оптом в и области – цена, продажа, каталог.
+meta_description: В продаже ремонтные шипы Теком для зимней резины по оптовой цене в магазине РемШип. Доставка по и по всей России.
+permalink: /
+aggregateService:
+  cityService:
+    city: Спб
+---
+<main class="all-content">
+  <h2 class="visually-hidden">
+    Ремшип - ремонтные шипы в {{ aggregateService.cityService.city }}
+  </h2>
+  {% include banner.html %}
+  {% include discounts.html %}
+  {% include product-learn-more.html %}
+  {% include product-popular.html %}
+  {% include product-viewed.html %}
+  {% include seo-text.html %}
+</main>
