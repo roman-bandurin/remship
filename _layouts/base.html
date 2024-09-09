@@ -72,7 +72,7 @@
                     <div class="header__burger">
                       <span class="header__burger-span"></span>
                     </div>
-                    <a href="{{ macro.pathWithCity('catalog/index', 'catalogWithCity/index') | trim }}">Каталог</a>
+                    <a href="macro.pathWithCity('catalog/index', 'catalogWithCity/index') | trim">Каталог</a>
                   </div>
                   <div class="header__bottom__subtitle">
                     Меню
@@ -80,72 +80,49 @@
                 </div>
                 <div class="inner-menu">
                   <ul class="inner-menu__list">
-                    {% for category in categoriesMenu %}
-                    <li {% if category.productCategories | length> 0 %} class="inner-menu__sublist sublist"
-                      id="submenu-{{ category.id }}" {% else %} class="lvl1" {% endif %}>
+                    <li class="inner-menu__sublist sublist" class="lvl1">
                       <a
-                        href="{{ macro.pathWithCity('catalog/viewCategory', 'catalogWithCity/viewCategory', {'category': category.slug}) | trim }}">
-                        {{ category.title }}
-                        {% if category.icon is defined and category.icon != '' %}
-                        {% include 'components/icons/' ~ category.icon ~ '.svg.twig' %}
-                        {% endif %}
+                        href="macro.pathWithCity('catalog/viewCategory', 'catalogWithCity/viewCategory', {'category': category.slug}) | trim">
+                        category.title
                       </a>
                     </li>
-                    {% endfor %}
                   </ul>
 
                   <div class="inner-menu__block">
-                    {% for category in categoriesMenu %}
-                    {% if category.productCategories | length > 0 %}
-                    <ul class="inner-menu__list submenu" data-submenu="submenu-{{ category.id }}">
-                      {% for subCategory in category.productCategories %}
-                      <li {% if subCategory.productCategories | length> 0 %} class="inner-menu__sublist sublist_sub"
-                        id="submenu-sub-{{ subCategory.id }}" {% else %} class="lvl2" {% endif %}>
+                    <ul class="inner-menu__list submenu" data-submenu="submenu-category.id">
+                      <li class="inner-menu__sublist sublist_sub" id="submenu-sub-" class="lvl2">
                         <a
-                          href="{{ macro.pathWithCity('catalog/viewCategory', 'catalogWithCity/viewCategory', {'category': subCategory.slug} ) | trim }}">{{
-                          subCategory.title }}</a>
+                          href="macro.pathWithCity('catalog/viewCategory', 'catalogWithCity/viewCategory', {'category': subCategory.slug} ) | trim">
+                          subCategory.title
+                        </a>
                       </li>
-                      {% endfor %}
                     </ul>
-                    {% endif %}
-                    {% endfor %}
                   </div>
                   <div class="inner-menu__block">
-                    {% for category in categoriesMenu %}
-                    {% if category.productCategories | length > 0 %}
-                    {% for subCategory in category.productCategories %}
-                    {% if subCategory.productCategories | length > 0 %}
-                    <ul class="inner-menu__list submenu-sub" data-submenu="submenu-sub-{{ subCategory.id }}">
-                      {% for subSubCategory in subCategory.productCategories %}
+                    <ul class="inner-menu__list submenu-sub" data-submenu="submenu-sub-subCategory.id">
                       <li>
                         <a
-                          href="{{ macro.pathWithCity('catalog/viewCategory', 'catalogWithCity/viewCategory', {'category': subSubCategory.slug}) | trim }}">{{
-                          subSubCategory.title }}</a>
+                          href="#"></a>
                       </li>
-                      {% endfor %}
                     </ul>
-                    {% endif %}
-                    {% endfor %}
-                    {% endif %}
-                    {% endfor %}
                   </div>
                 </div>
                 <nav class="header__main-menu main-menu">
                   <ul class="main-menu__list">
                     <li class="main-menu__item"><a
-                        href="{{ macro.pathWithCity('about/index', 'aboutWithCity/index' ) | trim }}">О
+                        href="#">О
                         компании</a></li>
                     <li class="main-menu__item"><a
-                        href="{{ macro.pathWithCity('delivery/index', 'deliveryWithCity/index' ) | trim }}">Доставка
+                        href="#">Доставка
                         и оплата</a></li>
                     <li class="main-menu__item"><a
-                        href="{{ macro.pathWithCity('contacts/index', 'contactsWithCity/index' ) | trim }}">Контакты</a>
+                        href="#">Контакты</a>
                     </li>
                     <li class="main-menu__item main-menu__item-actions"><a
-                        href="{{ macro.pathWithCity('discounts/index', 'discountsWithCity/index' ) | trim }}">Акции</a>
+                        href="#">Акции</a>
                     </li>
                     <li class="main-menu__item">
-                      <a href="{{ macro.pathWithCity('infoWithoutCity/index', 'infoWithCity/index') | trim }}">
+                      <a href="#">
                         Полезная информация
                       </a>
                     </li>
