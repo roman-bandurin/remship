@@ -1,0 +1,76 @@
+  .companies-list {
+    max-height: 328px;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 6px;
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.15));
+    margin: 15px 0;
+    transform: scaleY(0);
+    transition: transform display .35s ease;
+    display: none;
+    &_visible {
+      transform: scaleY(1);
+      transition: transform display .35s ease;
+      display: block;
+    }
+
+    &__item {
+      cursor: pointer;
+      padding: 15px;
+
+      &:hover {
+        background-color: rgba(0, 159, 227, 0.15);
+      }
+
+      &:first-of-type {
+        border-radius: 6px 6px 0 0;
+      }
+
+      &:last-of-type {
+        border-radius: 0 0 6px 6px;
+      }
+
+      &:first-of-type:last-of-type {
+        border-radius: 6px;
+      }
+    }
+  }
+
+.register-entity-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 70px;
+
+  @media screen and (min-width: 1300px) {
+    padding-bottom: 150px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      gap: 80px;
+    }
+
+    h2 {
+      width: 300px;
+    }
+  }
+
+  .section-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form_send {
+    width: max-content;
+    margin: 0 auto;
+  }
+}

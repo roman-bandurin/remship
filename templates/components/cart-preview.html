@@ -1,0 +1,29 @@
+<div class="cart-preview">
+  <div class="cart-preview__header">
+    <div class="cart-preview__quantity">
+      Корзина <span class="cart-preview__count">(0)</span>
+    </div>
+    <button class="cart-preview__clear">
+      Очистить все
+    </button>
+  </div>
+  <ul class="cart-preview__list">
+    <load
+      ="templates\components\cart-preview-list.html"
+    />
+  </ul>
+  <div class="cart-preview__footer">
+    <div class="cart-preview__discount preview-discount hidden">
+      <span class="preview-discount__title">Скидка</span>
+      <span class="preview-discount__value">50р</span>
+    </div>
+    <div class="cart-preview__total preview-total">
+      <span class="preview-total__title">Итого</span>
+      <span class="preview-total__value">100р</span>
+    </div>
+
+    <a class="cart-preview__btn" href="/cart">
+      Перейти к оформлению
+    </a>
+  </div>
+</div>

@@ -3,9 +3,9 @@
   <div class="swiper-container main-slider__inner hidden">
     <div class="swiper-wrapper">
       {% for banner in site.data.banners %}
-      <a class="swiper-slide main-slider__slide " href="{{ banner.link }}">
+      <a class="swiper-slide main-slider__slide " href="#">
         <img class="main-slider__image-mobile main-slider__img  lzy_img"
-          data-src="{{ banner.image }}" width="1900" height="300"
+          data-src="#" loading="lazy" width="1900" height="300"
           src="" alt="banner" />
       </a>
       {% endfor %}

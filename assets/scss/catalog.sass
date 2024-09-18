@@ -1,0 +1,443 @@
+.catalog
+  margin-bottom: 81px
+
+  @media (min-width: 1300px)
+    margin-bottom: 55px
+
+.catalog__header
+  display: flex
+  flex-direction: column
+  padding-top: 40px
+
+  @media (min-width: 1300px)
+    flex-direction: row
+    padding-top: 24px
+
+  @media (min-width: 1300px)
+    padding-top: 40px
+    justify-content: space-between
+    align-items: center
+
+.catalog__header-left
+  display: flex
+  align-items: baseline
+  margin-bottom: 20px
+  @media (min-width: 1300px)
+    margin-bottom: 0
+
+.catalog__header-right
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-bottom: 1px solid #E2E2E2
+  border-top: 1px solid #E2E2E2
+  margin: 0 -16px
+  position: relative
+  &::after 
+    content: ''
+    width: 1px
+    height: 100%
+    position: absolute
+    left: 50%
+    transform: translateX(-100%)
+    top: 0
+    border-left: 1px solid #E2E2E2
+
+
+  @media (min-width: 768px)
+    margin: 0 -50px
+
+  @media (min-width: 1300px)
+    margin: 0
+    border: none
+    display: block
+    &::after
+      display: none
+
+.catalog__all-number
+  margin-left: 15px
+  font-size: 14px
+  line-height: 17px
+  color: #B7BBBE
+
+  @media (min-width: 1300px)
+    color: #101C29
+
+.catalog__title
+  &.block-title
+    margin-bottom: 0
+
+.filters-block__mobile
+  display: flex
+  margin: 20px -16px 0
+
+  @media (min-width: 768px)
+    margin: 24px -50px 0
+
+  @media (min-width: 1300px)
+    margin-top: 54px
+    display: none
+
+  button
+    width: 50%
+    border: 1px solid #E2E2E2
+    padding: 12px
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    font-size: 14px
+    line-height: 17px
+    color: #25252A
+
+    @media (min-width: 768px)
+      font-size: 16px
+      line-height: 20px
+
+    &#filtersBtn
+      border-left: none
+
+      span
+        padding-right: 23px
+
+        &::before
+          content: ''
+          position: absolute
+          top: 50%
+          right: 0
+          width: 15px
+          height: 15px
+          transform: translateY(-50%)
+          background-image: url(../icons/icon-filter.svg)
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+
+          @media (min-width: 768px)
+            width: 17px
+            top: 57%
+
+    &#sortingBtn
+      border-right: none
+      border-left: none
+
+      span
+        padding-right: 20px
+
+        &::before
+          content: ''
+          position: absolute
+          top: 50%
+          right: 0
+          width: 10px
+          height: 10px
+          transform: translateY(-50%)
+          background-image: url(../icons/arrow-blue.svg)
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+
+          @media (min-width: 768px)
+            width: 12px
+            top: 55%
+
+    span
+      position: relative
+
+.catalog__main
+  @media (min-width: 768px)
+    margin-top: 27px
+
+  @media (min-width: 1300px)
+    margin-top: 51px
+    display: flex
+    justify-content: space-between
+
+.catalog__products-wrapper
+  @media (min-width: 1300px)
+    width: 72.5%
+
+.catalog__products
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -16px
+  padding-bottom: 34px
+
+  @media (min-width: 768px)
+    gap: 36px
+    margin: 36px 0 0
+
+  @media (min-width: 900px)
+    margin: 0 -14px
+
+  @media (min-width: 1300px)
+    justify-content: flex-start
+    margin: 0
+    align-items: flex-start
+
+  &.below
+    animation-name: catalogBelow
+    animation-duration: .5s
+    animation-fill-mode: forwards
+
+  .product__item
+    width: 100%
+    padding: 16px 10px
+    border-bottom: 1px solid #E2E2E2
+    position: relative
+
+    @media (min-width: 375px)
+      width: 50%
+
+    @media (min-width: 768px)
+      flex: 1
+      border: 1px solid #D8EDF6
+      border-radius: 8px
+      padding: 18px 18px 28px
+      margin-bottom: 0
+
+    @media (min-width: 900px)
+      flex: none
+      width: calc(33.3333% - 72px / 3)
+
+    @media (min-width: 1650px)
+      width: calc(25% - 36px / 4 * 3)
+
+    @media (max-width: 767px)
+      border: none
+      border-bottom: 1px solid #E2E2E2
+      border-radius: 0
+
+    &:hover
+      @media (min-width: 1300px)
+        margin-top: -20px
+        margin-bottom: -40px
+        border-color: transparent
+
+    &:nth-child(odd)
+      @media (min-width: 375px) and (max-width: 767px)
+        border-right: 1px solid #E2E2E2
+
+    h3
+      font-weight: 500
+      font-size: 13px
+      line-height: 16px
+
+    .product__code
+      margin-top: 8px
+
+    .product__new-price
+      margin-top: 11px
+
+    .product__availability
+      top: 16px
+      left: 10px
+
+      @media (min-width: 768px)
+        width: max-content
+        right: 18px
+        left: auto
+
+      .availability-true, .availability-false
+        border-radius: 8px
+
+    .product__image
+      @media (min-width: 768px)
+        width: 100%
+        margin: 20px 0
+
+      img
+        width: 100%
+        height: auto !important
+        aspect-ratio: 0.833
+        object-fit: contain
+        user-drag: none
+        -webkit-user-drag: none
+
+.catalog__filters-patch
+  display: flex
+  flex-wrap: wrap
+
+  .filter-patch__item, .filter-patch__clear-all
+    padding: 11px 18px 11px 11px
+    background: #D8EDF6
+    border-radius: 8px
+    margin-right: 14px
+    position: relative
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    font-size: 14px
+    line-height: 17px
+    color: #101C29
+    display: flex
+    align-items: center
+    margin-bottom: 14px
+
+    span
+      padding-right: 8px
+
+    .filter-patch__clear
+      width: 12px
+      height: 13px
+      position: relative
+
+      &::before, &::after
+        content: ''
+        position: absolute
+        width: 1px
+        height: 100%
+        top: 0
+        transform: translateY(-50%)
+        right: 0
+        background-color: #101C29
+        border-radius: 1px
+
+      &::before
+        transform: rotate(45deg)
+
+      &::after
+        transform: rotate(-45deg)
+
+  .filter-patch__clear-all
+    background: #F0F3F6
+    display: none
+    order: 1
+
+    &.show
+      display: flex
+
+.sorting__desktop
+  @media (max-width: 1299px)
+    display: none
+
+.sorting__mobile
+  border: 1px solid #e2e2e2
+  border-right: none
+  border-left: none
+
+  @media (min-width: 1300px)
+    display: none
+
+  &.sorting__select
+    width: 50%
+
+  .sorting__select-active
+    width: max-content
+    margin: 0 auto
+    padding: 12px
+    text-align: center
+    display: block
+
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      right: -10px
+      width: 10px
+      height: 10px
+      transform: translateY(-50%)
+      background-image: url(../icons/arrow-blue.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+
+      @media (min-width: 768px)
+        width: 12px
+        top: 55%
+
+    &.active
+      &::after
+        transform: translateY(-45%) rotate(-180deg)
+        top: 48%
+
+  .sorting__select-optionblock
+    width: 100%
+    border-radius: 0
+    top: 104%
+
+
+.sorting__select
+  position: relative
+  box-sizing: border-box
+  cursor: pointer
+  transition: all .3s ease
+  height: 100%
+  width: 50%
+  display: flex
+  justify-content: center
+
+  @media (min-width: 1300px)
+    border-left: none
+    width: max-content
+
+  & + .catalog-item__select
+    margin-left: 50px
+
+.sorting__select-active
+  padding: 14px 15px
+  position: relative
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  gap: 5px
+  font-weight: 500
+  font-size: 16px
+  line-height: 20px
+  color: #25252A
+  svg
+    width: 14px
+    height: 14px
+    fill: #009FE3
+    transform: rotate(90deg)
+    transition: transform .4s ease
+
+.sorting__select-active.active
+  border-radius: 4px 4px 0 0
+  svg
+    transform: rotate(270deg)
+
+.sorting__select-optionblock
+  display: none
+  position: absolute
+  top: 100%
+  right: 0
+  padding: 18px
+  width: 290px
+  background: #FFFFFF
+  box-shadow: 0 5px 12px rgba(78, 78, 78, 0.3)
+  border-radius: 12px
+  z-index: 2
+
+.sorting__option
+  display: block
+
+  & + &
+    margin-top: 16px
+
+.sorting__option input[type=radio]
+  display: none
+
+.sorting__option-text
+  font-size: 16px
+  line-height: 20px
+  color: #101C29
+  transition: all .1s ease
+
+.sorting__option:hover .sorting__option-text
+  font-weight: 500
+  font-family: "MontserratMedium", sans-serif
+
+.catalog__pagination
+  margin-top: 44px
+  max-width: fit-content
+  &.pagination .tui-page-btn
+    width: 32px !important
+    height: 32px !important
+
+.loader.items-list__loader
+  display: none
+
+@keyframes catalogBelow
+  from
+    padding-top: 0
+
+  to
+    padding-top: 30px

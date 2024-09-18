@@ -1,0 +1,70 @@
+@mixin text($font-size, $line-height, $font-weight) {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin radioButton {
+  position: relative;
+
+  input[type='radio'] {
+    position: absolute;
+    z-index: -1;
+    opacity: -1;
+
+    & + label {
+      @include text(16px, 1.4em, 500);
+
+      display: inline-flex;
+      align-items: flex-start;
+      user-select: none;
+      cursor: pointer;
+
+      &::before {
+        margin-right: 5px;
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+    }
+    &:disabled + label {
+      user-select: none;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    input[type='radio'] + label {
+
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    input[type='radio'] + label {
+      @include text(18px, 1.4em, 500);
+    }
+  }
+}
+
+@mixin input {
+  width: 100%;
+  border: 1px solid #CBD3E2;
+  border-radius: 6px;
+  padding: 18px 22px;
+
+  @include text(14px, 17px, 400);
+
+  @media screen and (min-width: 768px) {
+
+  }
+
+  @media screen and (min-width: 1300px) {
+    @include text(18px, 22px, 400);
+  }
+}

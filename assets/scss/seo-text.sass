@@ -1,0 +1,35 @@
+.seo-text
+  padding-top: 50px
+  padding-bottom: 50px
+
+  @media (min-width: 768px)
+    padding-top: 60px
+    padding-bottom: 20px
+
+  &__title
+    max-width: unset
+
+  &__content
+    margin-top: 20px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    @media (min-width: 1300px)
+      flex-direction: row
+      margin-top: 0
+      gap: 40px
+
+    .content-text
+      flex: 1
+
+      font-family: 'Montserrat', sans-serif
+      font-style: normal
+      font-weight: 400
+      font-size: 16px
+      line-height: 160%
+      color: #25252A
+
+      p
+        padding: 10px 0
+        text-align: justify

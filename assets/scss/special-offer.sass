@@ -1,0 +1,147 @@
+@import "base/variables"
+  
+.special-offer 
+  background-color: $bg-grey
+  padding: 40px 0
+  position: relative
+
+  @media (min-width: 768px)
+    padding: 60px 0
+
+  @media (min-width: 1300px)
+    padding: 60px 0 70px
+
+
+.special-offer__slider
+  overflow: visible
+
+.special-offer__wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.special-offer__link
+  display: grid !important
+  grid-template-columns: 1fr 1fr
+  width: 100%
+  max-width: 510px
+  height: auto
+  max-height: 280px
+  margin-left: 10px
+  overflow-x: visible
+  justify-content: space-between
+  position: relative
+  border-radius: 8px
+
+  @media (min-width: 768px)
+    width: 668px
+    max-width: 100%
+    margin-left: 0
+
+.special-offer__text-block
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  gap: 10px
+  grid-column: 2 / 3
+  padding: 20px
+  background-color: $blueMenu
+
+  @media (min-width: 768px)
+    padding: 30px 10px 30px 20px
+
+  h3 
+    font-size: 14px
+    line-height: 120%
+    font-weight: 300
+    //font-family: "MontserratMedium"
+    margin-bottom: 8px
+    text-align: center
+    text-transform: uppercase
+
+    @media (min-width: 550px)
+      font-size: 16px
+
+    @media (min-width: 768px)
+      font-size: 20px
+
+  .text-block__title,
+  .text-block__text
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 3
+    overflow: hidden
+    color: #FFFFFF
+    font-weight: 600
+
+  .text-block__text
+    line-height: 140%
+    font-size: 10px
+
+    @media (min-width: 550px)
+      font-size: 14px
+
+    @media (min-width: 768px)
+      font-size: 16px
+
+  .special-offer__more-info
+    display: block
+    text-align: right
+    font-size: 12px
+    font-weight: 700
+    font-family: "MontserratMedium"
+    line-height: 20px
+    color: #009FE3
+    text-transform: uppercase
+
+    background-color: #FFFFFF
+    width: max-content
+    padding: 8px 15px
+    border-radius: 10px
+
+    &:hover
+      background-color: $bg-grey
+
+    @media (min-width: 550px)
+      font-size: 14px
+
+
+.special-offer__image-block
+  grid-column: 1 / 2
+  height: 100%
+  background-color: #fff
+  max-height: 280px
+
+  img
+    height: 100%
+    object-fit: cover
+
+.special-offer__period
+  background-color: #CF4949
+  font-size: 12px
+  padding: 6px 11px
+  color: #EFEDED
+  font-weight: 600
+  font-family: "MontserratMedium"
+
+  @media (min-width: 768px)
+    font-size: 14px
+    line-height: 140%
+
+  @media (max-width: 767px)
+    display: none
+
+.special-offer__scrollbar 
+  background: #EFF2F3
+  border-radius: 1px
+  height: 2px !important
+  bottom: -18px !important
+
+  @media (min-width: 768px)
+    display: none
+
+  .swiper-scrollbar-drag
+    background: #4198F7
+    border-radius: 1px
+    height: 2px !important

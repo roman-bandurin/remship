@@ -1,20 +1,6 @@
----
-layout: base
-title: Купить ремонтные шипы Теком оптом в и области – цена, продажа, каталог.
-meta_description: В продаже ремонтные шипы Теком для зимней резины по оптовой цене в магазине РемШип. Доставка по и по всей России.
-permalink: /
-aggregateService:
-  cityService:
-    city: Спб
----
-<main class="all-content">
-  <h2 class="visually-hidden">
-    Ремшип - ремонтные шипы в {{ aggregateService.cityService.city }}
-  </h2>
-  {% include banner.html %}
-  {% include discounts.html %}
-  {% include product-learn-more.html %}
-  {% include product-popular.html %}
-  {% include product-viewed.html %}
-  {% include seo-text.html %}
-</main>
+<load
+  ="_layouts\base.html"
+  title="Купить ремонтные шипы Теком оптом в {{ aggregateService.cityService.city.name|geo }} и области – цена, продажа, каталог."
+  meta_description="В продаже ремонтные шипы Теком для зимней резины по оптовой цене в магазине РемШип. Доставка по {{ aggregateService.cityService.city.name|geo('dative') }} и по всей России."
+  content="templates\index.html"
+/>

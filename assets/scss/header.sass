@@ -1,0 +1,1182 @@
+.header
+  position: fixed
+  z-index: 100
+  width: 100%
+  top: 0
+
+  @media (min-width: 1300px)
+    .header__top-wrap
+      padding: 8px 0
+
+    .header__logo
+      height: 36px
+      width: 84px
+
+    .header__bottom
+      padding: 12px 0
+
+.header__top
+  background-color: #1d5f93
+  z-index: 11
+  display: none
+  transition: all .2s ease-out
+
+  @media (min-width: 1300px)
+    display: block
+    overflow: visible !important
+
+  a 
+    // font-weight: 500
+    // font-family: "MontserratMedium"
+    // font-weight: 300
+    // font-family: "MontserratMedium"
+    font-size: 12px
+    line-height: 15px
+    color: #FFFFFF
+
+    @media (min-width: 1300px)
+      font-size: 14px
+      line-height: 17px
+    
+    // @media (min-width: 1300px)
+    //   padding: 0 33px
+
+.header__top-wrap
+  padding: 11px 0
+  transition: all .2s ease-in-out
+
+.header__logo
+  width: 60px
+  height: 42px
+  margin-right: 37px
+  display: none
+  transition: all .2s ease-out
+  // @media (min-width: 768px)
+  //   margin-left: 24px
+
+  @media (min-width: 1300px)
+    margin-right: 35px
+    width: 95px
+    height: 66px
+    margin-left: 13px
+    display: block
+
+
+  svg
+    object-fit: contain
+    width: 100%
+    height: 100%
+
+.header__mobile-logo
+  @media (min-width: 1300px)
+    display: none
+
+  svg 
+    display: block
+    margin: 0 auto
+
+.main-menu
+  @media (min-width: 768px)
+    // margin-left: 28px
+    // margin-top: 16px
+
+  @media (min-width: 768px)
+    // margin-left: 32px
+
+.main-menu__list 
+  display: flex
+
+  .main-menu__item 
+    transition: all .3s ease
+
+    @media (max-width: 1299px)
+      display: none
+
+    &.main-menu__item-actions
+      @media (min-width: 1300px)
+        display: block
+
+      a 
+        color: $red
+
+    & + .main-menu__item
+      // @media (min-width: 768px)
+        // margin-left: 28px
+
+      @media (min-width: 1300px)
+        margin-left: 32px
+
+    a 
+      font-weight: 500
+      font-family: "MontserratMedium", sans-serif
+      font-size: 14px
+      line-height: 17px
+      letter-spacing: -0.01em
+      text-transform: uppercase
+
+    &:hover
+      color: #5D7687
+
+.header__burger-wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 2px
+
+.header__burger-inner
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 19px
+  height: 14px
+  cursor: pointer
+  transition: all .5s ease-in-out
+  z-index: 1002
+  // margin-top: 18px
+
+  @media (min-width: 768px)
+    width: max-content
+
+  @media (max-width: 767px)
+    width: 19px
+    height: 14px
+
+  @media screen and (min-width: 1300px)
+    flex-direction: row
+
+  //span
+  //  background: #25252A
+  //  width: 19px
+  //  height: 2px
+  //  border-radius: 5px
+  //  transition: all .15s ease-in-out
+  //  position: relative
+  //
+  //  @media (min-width: 768px)
+  //    background-color: $blueMenu
+  //
+  //&::before, &::after
+  //  content: ''
+  //  position: absolute
+  //  background: #25252A
+  //  width: 19px
+  //  height: 2px
+  //  left: 0
+  //  border-radius: 5px
+  //  transition: all .15s ease-in-out
+  //
+  //  @media (min-width: 768px)
+  //    background-color: $blueMenu
+  //
+  //&::before
+  //  transform: translateY(-50%)
+  //  top: 1px
+  //
+  //&::after
+  //  transform: translateY(50%)
+  //  bottom: 1px
+
+  &.opened 
+    &::before
+      transform: rotate(-45deg)
+      bottom: 50%
+      top: auto
+      transition: top .15s .15s, transform .15s
+    
+    &::after
+      transform: rotate(45deg)
+      bottom: 50%
+      transition: top .15s .15s, transform .15s
+
+    span
+      background: 0 0
+      // transform: rotate(45deg)
+      transition: top .15s .15s, transform .15s
+
+  // &::before
+  //   top: 0
+
+  // &::after 
+  //   bottom: 0
+
+    // span 
+    //   background: transparent
+    //   box-shadow: none
+
+    //   &::before
+    //     transform: rotate(45deg)
+    //     top: auto
+
+    //   &::after
+    //     transform: rotate(-45deg)
+    //     top: auto
+
+  a
+    font-weight: 700
+    font-family: "MontserratMedium", sans-serif
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: -0.01em
+    text-transform: uppercase
+    color: $blueMenu
+    padding-left: 12px
+
+    @media (max-width: 1299px)
+      display: none
+
+.header__burger
+  width: 18px
+  height: 14px
+
+
+  span
+    background: #25252A
+    width: 19px
+    height: 2px
+    border-radius: 5px
+    transition: all .25s ease-in-out
+    position: absolute
+    top: 6px
+    left: 0
+
+    @media (min-width: 1300px)
+      background-color: $blueMenu
+
+  &::before, &::after
+    content: ''
+    position: absolute
+    background: #25252A
+    width: 19px
+    height: 2px
+    left: 0
+    border-radius: 5px
+    transition: all .25s ease-in-out
+
+    @media (min-width: 1300px)
+      background-color: $blueMenu
+
+  &::before
+    transform: translateY(-50%)
+    top: 1px
+
+  &::after
+    transform: translateY(50%)
+    bottom: 1px
+  &.opened
+    &::after
+      opacity: 0
+    &::before
+      transform: rotate(-45deg) translate(-3px, 3px)
+    span
+      transform: rotate(45deg)
+
+.header__bottom
+  padding: 5px 0 12px
+  background: linear-gradient(0deg, rgba(133, 198, 227, 0.45) 0%, rgba(255, 255, 255, 0.45) 100%), linear-gradient(93.26deg, #DDF2F9 -19.63%, #CADFF1 55.26%, #CEFEFA 112.85%)
+  box-shadow: 0px -3px 12px rgba(0, 0, 0, 0.25)
+  position: relative
+  z-index: 11
+
+  @media (min-width: 768px)
+    padding: 10px 0 15px
+
+  @media (min-width: 1300px)
+    padding: 8px 0 11px
+
+.header__bottom-menu
+  // @media (min-width: 768px)
+  display: flex
+  align-items: flex-end
+  gap: 6px
+
+  @media screen and (min-width: 350px)
+    gap: 12px
+
+  @media screen and (min-width: 768px)
+    gap: 24px
+
+  @media screen and (min-width: 1300px)
+    align-items: center
+
+  .header__catalog-menu
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @media screen and (min-width: 1300px)
+      display: none
+
+    .catalog-menu__icon
+      position: relative
+      line-height: 0
+      cursor: pointer
+
+      img
+        z-index: 1101
+        width: 20px
+        height: 19px
+
+.header__top-wrap
+  display: flex
+  justify-content: space-between
+
+  a
+    transition: color .4s
+
+  a:hover
+    color: $blueHover
+
+.header__top-left
+  display: flex
+
+.header__top-right
+  display: flex
+  font-size: 14px
+  line-height: 17px
+
+  a 
+    font-size: 16px
+    line-height: 17px
+
+.header__contact-us
+  color: #fff
+  padding-bottom: 1px
+  border-bottom: 1px dotted #fff
+  margin-left: 32px
+
+  @media (max-width: 1299px)
+    display: none
+
+.header__top-block
+  position: relative
+  padding-left: 13px
+  line-height: 0
+
+  &::before 
+    content: ''
+    position: absolute
+    background-color: #fff
+    opacity: 0.4
+    border-radius: 1px
+    top: 0
+    left: 0
+    height: 17px
+    width: 1px
+
+  & + .header__top-block
+    margin-left: 12px
+
+
+.header__search-mobile
+  width: 100%
+  margin-top: 16px
+  position: relative
+
+  @media (min-width: 1300px)
+    display: none
+
+  .search-input
+    width: 100%
+    background: #FFFFFF
+    border-radius: 8px
+    height: 36px
+    border: none
+    padding: 8px 38px 8px 15px
+
+  button
+    position: absolute
+    width: 19px
+    height: 19px
+    background-image: url(../icons/search.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    top: 50%
+    right: 10px
+    transform: translateY(-50%)
+    opacity: .34
+
+
+.header__search-desktop
+  line-height: 0
+
+  @media (max-width: 1299px)
+    display: none
+
+  // input 
+  //   display: none
+
+  // svg
+
+.header__search-icon
+  line-height: 0
+
+// .header__top-location
+//   display: none
+
+.header__bottom-inner
+  display: flex
+  justify-content: space-between
+
+.header__bottom-left
+  display: flex
+
+.header__bottom-right
+  display: flex
+  align-items: flex-end
+  justify-content: flex-end
+  gap: 6px
+
+  @media screen and (min-width: 350px)
+    gap: 12px
+
+  @media screen and (min-width: 768px)
+    gap: 24px
+
+  @media screen and (min-width: 1300px)
+    align-items: center
+
+  // @media (min-width: 768px)
+    //   margin-top: 6px
+  .header__account-wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .header__account
+      line-height: 0
+      position: relative
+      cursor: pointer
+
+      svg
+        // @media (min-width: 768px)
+        width: 23px
+        height: 21px
+
+    .header__account-menu
+      position: absolute
+      opacity: 0
+      visibility: hidden
+      transition: opacity 0.3s
+    &.authorized
+      .header__account::after
+        position: absolute
+        content: ''
+        width: 6px
+        height: 6px
+        background-color: #009fe3
+        border-radius: 50%
+        top: -10px
+        right: -1px
+      &:hover
+        .header__account-menu
+          visibility: unset
+          display: block
+          opacity: 1
+          transition: opacity 0.3s
+          z-index: 12
+          background-color: #fff
+          box-shadow: 0 5px 15px rgba(197, 221, 231, 0.57)
+          border-radius: 12px
+          width: max-content
+          right: 5px
+          padding: 18px
+          ul
+            li
+              a
+                color: #25252A
+                font-size: 14px
+                line-height: 17px
+                transition: color .3s
+              svg
+                margin-right: 13px
+                path
+                  transition: fill .3s
+            li:not(:last-of-type)
+              margin-bottom: 14px
+            li:hover
+              a
+                color: $blueMenu
+                transition: color .3s
+              svg
+                path
+                  fill: $blueMenu
+                  transition: fill .3s
+
+.search-box
+  display: none
+  width: 100%
+  background-color: white
+
+  &.opened
+    display: block
+    position: absolute
+    z-index: 1100
+    top: -2px
+    right: 201px
+    width: calc(100vw - 200px - 195px)
+    height: 45px
+
+  .search-txt
+    border-radius: 10px
+    outline: none
+    padding: 10px
+    color: #5D7687
+    font-size: 16px
+    width: 100%
+    font-weight: bold
+    border: 1px solid #009FE3
+
+    @media (max-width: 1299px)
+      display: none
+
+  @media (max-width: 1299px)
+    display: none
+
+.search-btn
+  display: flex
+  color: black
+  cursor: pointer
+  z-index: 1101
+
+  &.opened
+    path
+      fill: #009FE3
+
+  @media (max-width: 1299px)
+    display: none
+
+.search-box-mobile
+  display: none
+
+  .search-txt
+    width: 100%
+    display: block
+    border: none
+
+  &.active
+    border: 1px solid #009FE3
+    path
+      fill: #009FE3
+
+  @media (max-width: 1299px)
+    margin-top: 12px
+    padding: 4px 16px
+    height: 39px
+    display: flex
+    justify-content: center
+    gap: 20px
+    border-radius: 8px
+    background: #FFF
+    button
+      display: flex
+      align-items: center
+    input
+      width: 100%
+      border: none
+
+.header__basket
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  svg
+    // @media (min-width: 768px)
+    width: 26px
+    height: 23px
+
+.header__basket-block
+  display: flex
+  align-items: center
+
+.header__basket-icon
+  line-height: 0
+  cursor: pointer
+  position: relative
+.header__basket-count
+  opacity: 0
+  width: 19px
+  height: 19px
+  position: absolute
+  top: -8px
+  right: -8px
+  font-size: 10px
+  font-weight: 600
+  line-height: 19px
+  color: #fff
+  text-align: center
+  border-radius: 50%
+  background-color: #CF4949
+  user-select: none
+  pointer-events: none
+  transition: opacity .4s ease
+  &.active
+    opacity: 1
+
+.header__bottom-block
+  position: relative
+  @media (max-width: 1299px)
+    width: 33.3333%
+
+
+.header__busket-sum
+  margin-left: 12px
+
+  @media (max-width: 767px)
+    display: none
+
+  span 
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    font-size: 20px
+    line-height: 24px
+    color: #101C29
+
+.header__top-location
+  padding-right: 20px
+
+.location__select
+  //width: 125px
+
+  .result 
+    color: #fff
+    font-size: 12px
+    line-height: 15px
+    text-decoration: underline dotted #fff
+    //border-bottom: 1px dotted #fff
+
+    @media (min-width: 1300px)
+      font-size: 14px
+      line-height: 17px
+
+  .scroll
+    z-index: 10000
+    color: #fff
+    font-size: 12px
+    line-height: 15px
+
+    @media (min-width: 1300px)
+      font-size: 14px
+      line-height: 17px
+
+.simple-select
+  position: relative
+  display: block
+
+  //@media (min-width: 758px)
+  //  padding: 22px 20px
+
+  &:after
+    content: ''
+    position: absolute
+    width: 10px
+    height: 10px
+    top: 5px
+    right: -15px
+    background-image: url("../icons/arrow-grey.svg")
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+    transform: rotate(90deg)
+
+    transition: all .3s
+
+  @media (min-width: 1300px)
+    &:hover
+      cursor: pointer
+
+  &.opened
+    ul
+      //transform: translateY(45px) translateX(0)
+      opacity: 1
+      z-index: 1000
+      visibility: visible
+
+    //@media (min-width: 768px)
+    //  transform: translateY(12px) translateX(0)
+
+    &:after
+      transform: rotate(270deg)
+
+  &__current
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    font-family: 'Inter', sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 110%
+    color: #fff
+
+    svg
+      width: 10px
+      height: 10px
+
+      transition: .4s
+
+  &__list
+    width: max-content
+    height: 100%
+    max-height: 851px
+    position: fixed
+    z-index: -1
+    //top: 0
+    //left: 0
+
+    background: #101C29
+    //transform: translateY(45px) translateX(50%)
+
+    opacity: 0
+    visibility: hidden
+    transition: .3s
+
+    overflow-x: hidden
+    overflow-y: auto
+
+    @media (min-width: 768px)
+      transform: translateY(12px) translateX(0)
+
+  &__option
+    padding: 10px
+
+    font-family: 'Inter', sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 17px
+    color: #fff
+
+    @media (min-width: 1300px)
+      transition: .3s
+      &:hover
+        background: #101C29
+
+.inner-menu
+  position: absolute
+  background: #FFFFFF
+  box-shadow: 0 5px 12px rgba(78, 78, 78, 0.3)
+  border-radius: 12px
+  top: 66px
+  z-index: 10
+  padding: 15px 0
+  transition: all .3s ease
+  opacity: 0
+  visibility: hidden
+  display: flex
+  // animation-name: fadeOut
+  // animation-duration: .3s
+
+  &.show 
+    opacity: 1
+    visibility: visible
+    min-width: 330px
+    // animation-name: fadeIn
+    // animation-duration: .3s
+
+  .inner-menu__list
+    // min-width: 330px
+
+    &.submenu, &.submenu-sub
+      opacity: 0
+      visibility: hidden
+      width: 0
+      height: 0
+      transition: height, width .3s ease
+      &.show
+        opacity: 1
+        visibility: visible
+        width: auto
+        height: 100%
+        min-width: 330px
+        border-left: 1px solid #E4E4E4
+        transition: all .3s ease
+
+      a 
+        padding-left: 18px
+
+    li
+      font-size: 16px
+      line-height: 20px
+      // padding: 11px 18px
+      // transition: all .3s ease
+
+      // &:hover
+      //   background: rgba(65, 152, 247, 0.13)
+
+      &.inner-menu__sublist
+        position: relative
+
+        // padding-right: 45px
+
+        a 
+          &::after 
+            content: ''
+            position: absolute
+            background-image: url(../icons/arrow-grey.svg)
+            background-size: contain
+            background-repeat: no-repeat
+            width: 12px
+            height: 12px
+            right: 20px
+            top: 50%
+            transform: translateY(-50%)
+            transition: all .3s ease
+
+          &:hover
+            &::after
+              right: 10px
+
+      // & + li
+      //   margin-top: 12px
+
+      a 
+        position: relative
+        display: block
+        // padding-left: 35px
+        padding: 11px 47px 11px 53px
+        transition: all .3s ease
+
+        &:hover
+          background: rgba(65, 152, 247, 0.13)
+
+        svg 
+          position: absolute
+          left: 18px
+          top: 50%
+          transform: translateY(-50%)
+
+.header__mobile-menu
+  margin-top: 0
+  top: -120%
+  position: fixed
+  transition: top .7s ease
+  z-index: 10
+  width: 100%
+  @media (min-width: 1300px)
+    display: none
+
+
+
+  &.opened
+    width: 100%
+    height: 100%
+    //animation-name: headerMobile
+    //animation-duration: .4s
+    //animation-fill-mode: forwards
+    opacity: 1
+    visibility: visible
+    transition: top .7s ease
+    position: fixed
+    justify-content: center
+    align-items: center
+    left: 0
+    top: 112px
+    right: 0
+    background: rgba(0,0,0,.36)
+    z-index: 10
+    padding: 0
+
+.mobile-menu__wrap
+  background-color: #fff
+  min-height: 100vh
+  position: relative
+
+.mobile-menu__page-1
+  overflow-y: auto
+  overflow-x: hidden
+
+.mobile-menu__inner-page
+  position: absolute
+  top: 0
+  z-index: 3
+  width: 100%
+  height: 0
+  //left: 50%
+  //margin-left: -280px
+  //opacity: 0
+  //transform: translateX(100%)
+  background-color: #ffffff
+  min-height: 100vh
+  animation-name: fadeOutLeft
+  animation-duration: .4s
+  animation-fill-mode: forwards
+  overflow-y: auto
+  overflow-x: hidden
+
+  &.visible
+    width: 100%
+    height: 100%
+    //left: 0
+    //margin-left: 0
+    //opacity: 1
+    //transform: translateX(0)
+    animation-name: fadeInRight
+    animation-duration: .4s
+    animation-fill-mode: forwards
+
+  .mobile-menu__pane
+    z-index: 4
+    width: 100%
+    height: 0
+    //left: 50%
+    //margin-left: -280px
+    //opacity: 0
+    //transform: translateX(100%)
+    background-color: #ffffff
+    min-height: 100vh
+    position: absolute
+    top: 0
+    animation-name: fadeOutLeft
+    animation-duration: .4s
+    animation-fill-mode: forwards
+    padding-bottom: 130px
+
+    &.visible
+      width: 100%
+      height: max-content
+      //left: 0
+      //margin-left: 0
+      //opacity: 1
+      //transform: translateX(0)
+      animation-name: fadeInRight
+      animation-duration: .4s
+      animation-fill-mode: forwards
+
+
+.mobile-menu__inner-main
+  padding: 0 16px
+  background-color: #fff
+
+  ul
+    li
+      padding: 16px 0
+      font-size: 16px
+      line-height: 20px
+      color: #101C29
+      border-bottom: 1px solid #F0F0F0
+
+      &.mobile-menu__sublist
+        position: relative
+        padding-right: 20px
+
+        &::before
+          content: ''
+          position: absolute
+          top: 50%
+          right: 0
+          width: 15px
+          height: 15px
+          transform: translateY(-50%)
+          background-image: url("../icons/arrow-grey.svg")
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+
+      a
+        display: block
+.link-to-catalog
+  &_show-all
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+.mobile-menu__list
+  display: flex
+  flex-direction: column
+
+.mobile-menu__item
+  border-bottom: 1px solid #F0F0F0
+  padding: 16px 0
+
+  &.full-screen
+    margin: 0 -16px
+    padding: 16px
+
+    h2
+      font-weight: 700
+      font-family: "MontserratMedium", sans-serif
+
+  &.mobile-menu__city
+    a
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        right: 0
+        width: 15px
+        height: 15px
+        transform: translateY(-50%)
+        background-image: url("../icons/arrow-grey.svg")
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+
+  &.mobile-menu__catalog-item
+    .mobile-menu__item-title
+      span
+        width: 18px
+        height: 2px
+        background-color: #009FE3
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+        border-radius: 4px
+
+      &::before, &::after
+        content: ''
+        position: absolute
+        width: 18px
+        height: 2px
+        background-color: #009FE3
+        left: 0
+        border-radius: 4px
+
+      &::before
+        top: 3px
+
+      &::after
+        bottom: 3px
+
+  h2
+    font-size: 16px
+    line-height: 20px
+    color: #101C29
+    padding-left: 32px
+    font-weight: 400
+
+  .mobile-menu__item-title, a
+    display: block
+    position: relative
+    cursor: pointer
+
+    svg
+      margin-right: 10px
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+
+.mobile-menu__inner-header
+  background-color: #F8F8F8
+  padding: 18px 32px
+  margin: 0 -16px
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 30px
+    width: 15px
+    height: 15px
+    transform: translateY(-50%) rotate(180deg)
+    background-image: url("../icons/arrow-grey.svg")
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+  h2
+    font-weight: 600
+    font-family: "MontserratMedium", sans-serif
+    font-size: 16px
+    line-height: 20px
+    color: #101C29
+    text-align: center
+    padding: 0 20px
+
+.mobile-menu__contacts
+  display: flex
+  flex-direction: column
+  padding: 18px 0
+
+  a.mobile-menu__tel
+    font-weight: 600
+    font-family: "MontserratMedium", sans-serif
+    font-size: 16px
+    line-height: 20px
+    color: #25252A
+    margin-bottom: 8px
+    transition: all .3s ease
+
+    &:hover
+      opacity: .6
+
+  p
+    font-size: 14px
+    line-height: 140%
+    color: #25252A
+    margin-bottom: 8px
+
+  a.mobile-menu__email
+    font-size: 14px
+    line-height: 140%
+    text-decoration-line: underline
+    color: #25252A
+    margin-bottom: 16px
+    transition: all .3s ease
+
+    &:hover
+      text-decoration-line: none
+
+  .mobile-menu__social
+    display: flex
+
+    a
+      & + a
+        margin-left: 12px
+
+.header__bottom__subtitle
+  margin-top: 2px
+  font-size: 12px
+  text-align: center
+
+  @media screen and (min-width: 1300px)
+    display: none
+
+@keyframes headerMobile
+  from
+    transform: translateX(-1000%)
+
+  to
+    transform: translateX(0)
+
+@keyframes headerMobileClose
+  from
+    transform: translateX(0)
+
+  to
+    transform: translateX(-1000%)
+
+@keyframes fadeInRight
+  from
+    opacity: 0
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+    left: 50%
+    margin-left: -280px
+
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    margin-left: 0
+    left: 0
+    margin-left: 0
+
+@keyframes fadeOutLeft
+  from
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    margin-left: 0
+    left: 0
+
+  to
+    opacity: 0
+    -webkit-transform: translate3d(100%, 0, 0)
+    transform: translate3d(100%, 0, 0)
+    left: 100%
+    margin-left: -280px

@@ -1,0 +1,131 @@
+.documents
+  background-color: #25252A
+  padding: 40px 0 80px
+
+  @media (min-width: 768px)
+    padding: 60px 0 110px
+
+  @media (min-width: 1300px)
+    padding: 80px 0 140px
+
+.documents__inner
+  // display: flex
+  // flex-direction: column 
+
+  @media (min-width: 1300px)
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+.documents__top
+  display: flex
+  justify-content: space-between
+
+  @media (min-width: 768px)
+    margin-bottom: 35px
+
+  @media (min-width: 1300px)
+    flex-direction: column
+    justify-content: flex-start
+    margin-bottom: 0
+    width: 18%
+    max-width: 260px
+    margin-right: 60px
+
+.documents__slider-wrapper 
+  @media (min-width: 1300px)
+    width: 75%
+    overflow: visible
+    position: relative
+    margin-right: -33px
+    padding-right: 33px
+
+.documents__slider
+  overflow: visible
+
+  @media (min-width: 1300px)
+    // width: 75%
+    margin-left: auto
+    overflow: hidden
+  //   margin-right: -33px
+
+  .swiper-wrapper
+    padding-right: 33px
+
+.documents__title
+  &.block-title
+    color: #FFFFFF
+
+    @media (min-width: 768px) and (max-width: 1299px)
+      max-width: 100%
+      margin-bottom: 0
+
+    @media (min-width: 1300px)
+      margin-bottom: 32px
+  
+.documents__slide
+  width: 136px
+
+  @media (min-width: 768px)
+    width: 189px
+    
+  @media (min-width: 768px)
+    width: 277px
+
+  img
+    width: 100%
+
+.swiper-scrollbar
+  &.documents__scrollbar
+    bottom: -30px
+    background: #EFEDED
+    // opacity: 1 !important
+    height: 2px
+
+    @media (min-width: 768px)
+      bottom: -40px
+
+    @media (min-width: 1300px)
+      padding-right: 33px
+
+    .swiper-scrollbar-drag
+      background: #009FE3
+      border-radius: 1px
+
+.documents__btns
+  display: flex
+
+  @media (max-width: 767px)
+    display: none
+
+.documents__btn-next, .documents__btn-prev
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  border: 1px solid #4198F7
+  transition: all .3s ease
+  position: relative
+
+  &.swiper-button-disabled
+    border: 1px solid #e2e2e2
+
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+    width: 15px
+    height: 15px
+    background-image: url(../icons/arrow-white.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+
+.documents__btn-prev 
+  &::before
+    transform: translateX(-50%) translateY(-50%) rotate(-180deg)
+
+.documents__btn-next
+  margin-left: 16px

@@ -1,0 +1,636 @@
+.user-account__subtitle
+  font-size: 18px
+  margin-bottom: 30px
+  margin-top: 40px
+
+  @media (min-width: 768px)
+    margin-top: 60px
+    margin-bottom: 28px
+
+  @media (min-width: 1300px)
+    font-size: 20px
+
+.user-account
+  margin-top: 30px
+
+  & .container
+    h1
+      display: none
+
+      @media (max-width: 1299px)
+        display: block
+
+    .user-account__wrapper
+      @media (min-width: 1300px)
+        display: flex
+
+      .user-account__content
+        @media (min-width: 1300px)
+          padding: 44px
+          box-shadow: 0 5px 15px rgba(197, 221, 231, 0.57)
+          background: #FFFFFF
+          border-radius: 18px
+          margin-bottom: 120px
+
+      .user-account__subtitle_mobile
+        @media (min-width: 1300px)
+          display: none
+
+.user-account__tablet-tabs
+  display: none
+  overflow-x: auto
+  overflow-y: hidden
+  border-bottom: 1px solid #F3F3F8
+
+  @media (max-width: 1299px)
+    display: block
+
+    .tablet-tabs__list
+      display: flex
+      gap: 30px
+      width: fit-content
+
+      .tablet-tabs__item
+        cursor: pointer
+        position: relative
+        text-align: center
+        padding: 12px 0
+        font-family: MontserratMedium, sans-serif
+        display: block
+        color: $text-black
+        font-size: 14px
+        line-height: 17px
+        white-space: nowrap
+
+        &.active
+          &:after
+            content: ""
+            display: block
+            position: absolute
+            width: 100%
+            height: 1px
+            border: 1px solid $blueMenu
+            bottom: -1px
+
+.account-info
+  display: flex
+  margin-bottom: 33px
+
+  .account-info__inner
+    align-self: flex-start
+    margin-left: 16px
+
+    @media (min-width: 768px)
+      margin-left: 30px
+      align-self: center
+
+    .account-info__name
+      font-family: "MontserratMedium"
+      font-weight: 500
+      font-size: 20px
+      line-height: 24px
+      color: #25252A
+      margin-bottom: 8px
+
+  .account-info__img-form
+    width: 53px
+
+    @media (min-width: 768px)
+      width: 75px
+
+    input
+      display: none
+      width: inherit
+      visibility: hidden
+
+    .account-info__img
+      position: relative
+      cursor: pointer
+
+      img
+        width: 100%
+
+      &::after
+        cursor: pointer
+        position: absolute
+        content: url("../images/userpic-plus-small.svg")
+        width: 16px
+        right: -2px
+        bottom: 2px
+
+        @media (min-width: 768px)
+          width: 18px
+          content: url("../images/userpic-plus.svg")
+          right: -1px
+          bottom: 5px
+
+    .account-info__img:hover
+      &::before
+        content: 'Изменить фото'
+        font-weight: 600
+        font-size: 9px
+        line-height: 12px
+        text-align: center
+        color: #FFFFFF
+        padding-top: 17px
+        background-color: rgba(0, 0, 0, 0.77)
+        position: absolute
+        width: 100%
+        height: 100%
+        border-radius: 100%
+
+        @media (min-width: 768px)
+          font-size: 12px
+          padding-top: 25px
+
+.personal-data
+  h2
+    display: none
+    @media (min-width: 1300px)
+      display: block
+      margin-top: 0
+
+  .personal-data__form
+    display: flex
+    gap: 20px
+    flex-direction: column
+
+    .input-wrapper
+      flex-direction: column
+      display: flex
+      gap: 20px
+      .input-row
+        width: 100%
+
+      @media (min-width: 768px)
+        flex-direction: row
+        gap: 12px
+        .input-row
+          width: 328px
+
+          input
+            width: 328px
+
+      @media (min-width: 1300px)
+        gap: 34px
+
+      p
+        font-size: 14px
+        line-height: 17px
+        color: $text-grey
+
+      .input-row__inner
+        display: flex
+        margin-top: 19px
+        gap: 42px
+
+        p
+          font-size: 16px
+          line-height: 20px
+          color: $text-black
+
+          input
+            margin-right: 34px
+
+    button
+      width: auto
+      align-self: flex-start
+
+.data-access
+  .data-access__form-wrapper
+    display: flex
+    flex-direction: column
+
+    @media (min-width: 768px)
+      gap: 12px
+      flex-direction: row
+
+    @media (min-width: 1300px)
+      gap: 34px
+
+    .data-access__form_tel, .data-access__form_mail
+      .input-row
+        display: flex
+        flex-direction: column
+
+        @media (min-width: 768px)
+          width: 328px
+
+        //.data-access__link
+        //  margin-top: 6px
+        //  align-self: flex-end
+        //  color: $link-green
+        //  text-decoration: underline
+        //
+        //  &:hover
+        //    text-decoration: none
+        //
+        //  &.confirmed
+        //    position: relative
+        //    text-decoration: none
+        //    cursor: default
+        //
+        //  &.confirmed::before
+        //    position: absolute
+        //    content: url("../images/access-link-confirmed.svg")
+        //    left: -21px
+
+  .data-access__social
+    margin-top: 20px
+    h3
+      font-family: MontserratMedium
+      font-weight: 500
+      color: $text-black
+      font-size: 16px
+      line-height: 20px
+    .data-access__social-list
+      display: flex
+      gap: 12px
+      margin-top: 30px
+      .data-access__social-item
+        .data-access__social-link
+          display: block
+          width: 42px
+
+          @media (min-width: 1300px)
+            width: 48px
+
+          svg
+            width: inherit
+            g
+              transition: opacity 0.3s
+
+        .data-access__social-link:hover
+          svg
+            g
+              opacity: 1
+              transition: opacity 0.3s
+
+.address
+  .address__form
+    display: flex
+    flex-direction: column
+    gap: 18px
+
+    @media (min-width: 768px)
+      .input-row_city
+        width: 328px
+
+    .input-row
+      label
+        position: relative
+        .more-city-btn
+          position: absolute
+          right: 17px
+          top: 39px
+          &::after
+            cursor: pointer
+            position: absolute
+            content: url("../icons/pencil-city.svg")
+            right: 0
+    .input-wrapper
+      display: flex
+      gap: 18px
+      flex-direction: column
+
+      @media (min-width: 768px)
+        flex-direction: row
+        gap: 13px
+
+        .input-row_street
+          width: 100%
+
+        .input-row:last-of-type
+          width: 157px
+
+      @media (min-width: 1300px)
+        gap: 34px
+
+        .input-row_street
+          width: 100%
+
+        .input-row:last-of-type
+          width: 147px
+
+    .input-wrapper_grid
+      flex-direction: column
+
+      @media (min-width: 768px)
+        flex-direction: row
+
+      .input-row
+        width: 50%
+
+        @media (min-width: 768px)
+          width: 157px
+
+        @media (min-width: 1300px)
+          width: 147px
+
+      .input-row__inner
+        display: flex
+        gap: 18px
+
+        @media (min-width: 768px)
+          gap: 13px
+
+        @media (min-width: 1300px)
+          gap: 33px
+
+    .input-row_comment
+      @media (min-width: 768px)
+        width: 100%
+
+      @media (min-width: 1300px)
+          width: 688px
+
+      textarea
+        padding: 12px
+
+    .address__button-wrapper
+      display: flex
+
+      button
+        width: 50%
+        padding: 12px 0
+        margin-right: 50px
+
+        @media (min-width: 768px)
+          width: 228px
+
+      .address__link
+        position: relative
+        align-self: center
+        font-family: MontserratMedium
+        display: block
+        color: $blueMenu
+        font-size: 14px
+        line-height: 17px
+        &::before
+          position: absolute
+          left: -25px
+          top: 2px
+          content: url("../images/plus-icon.svg")
+
+.password
+  padding-bottom: 80px
+
+  @media (min-width: 1300px)
+    padding-bottom: 0
+
+  .password__form
+    display: flex
+    gap: 18px
+    flex-direction: column
+
+    .input-row
+      label
+        position: relative
+
+      @media (min-width: 768px)
+        width: 328px
+
+    .input-wrapper
+      display: flex
+      flex-direction: column
+      gap: 18px
+
+      @media (min-width: 768px)
+        flex-direction: row
+        gap: 13px
+
+      @media (min-width: 1300px)
+        gap: 34px
+
+    button
+      align-self: flex-start
+      width: auto
+
+.user-account__aside
+  @media (min-width: 1300px)
+    margin-right: 22px
+    margin-top: 25px
+
+.order-content
+  margin-bottom: 120px
+
+.descktop-tabs
+  display: none
+  @media (min-width: 1300px)
+    display: block
+
+    .descktop-tabs__list
+      .descktop-tabs__item
+        cursor: pointer
+        margin-left: -33px
+        padding: 12px 0 12px 53px
+        display: flex
+        align-items: center
+        width: 338px
+        a
+          display: block
+          align-self: center
+        svg
+          margin-right: 18px
+
+        &.active
+          border-left: 4px solid $blueMenu
+          padding-left: 49px
+          background-color: rgba(0, 159, 227, .1)
+          border-radius: 0px 12px 12px 0px
+          svg
+            circle
+              fill: $blueMenu
+            path
+              fill: white
+
+.modal__user-changes
+  display: none
+  position: relative
+  background: #F9FDFF
+  border-radius: 8px
+  filter: drop-shadow(0px 5px 15px rgba(197, 221, 231, 0.57))
+  color: $black
+  font-size: 16px
+  line-height: 20px
+  width: 343px
+  padding: 14px
+  padding-left: 49px
+
+  &.active
+    display: block
+
+  p:first-child
+    display: none
+
+  @media (min-width: 768px)
+    background-color: white
+    width: 270px
+
+    p:first-child
+      font-weight: 600
+      margin-bottom: 8px
+      display: block
+
+.modal__user-changes_success
+  &::before
+    position: absolute
+    left: 18px
+    content: url("../icons/succes.svg")
+
+.modal__user-changes_unsuccess
+  &::before
+    left: 18px
+    position: absolute
+    content: url("../icons/unsucces.svg")
+
+    @media (min-width: 1300px)
+      top: 8px
+
+.user-account__mobile-tabs
+  display: none
+  padding: 0
+  .mobile-tabs__wrapper
+    background-color: #fff
+    padding-top: 18px
+    border-radius: 0px 0px 20px 20px
+    .popup-close
+      top: 30px
+    h1
+      font-weight: 600
+      text-align: center
+      font-size: 20px
+      line-height: 24px
+      border-bottom: 1px solid $border-grey
+      padding-bottom: 18px
+
+    .mobile-tabs__inner
+      padding: 25px 16px 40px 16px
+      .account-info
+        padding-bottom: 25px
+        border-bottom: 1px solid $border-grey
+
+        .account-info__inner
+          align-self: center
+          margin-left: 50px
+
+        .account-info__img
+          width: 75px
+
+          &::after
+            width: 18px
+            content: url("../images/userpic-plus.svg")
+            right: -1px
+            bottom: 5px
+
+    .mobile-tabs__list
+      .mobile-tabs__item
+        display: flex
+        &:not(:last-child)
+          margin-bottom: 23px
+        a
+          font-family: MontserratMedium
+          align-self: center
+          padding-left: 18px
+        &.active
+          a
+            color: $blueMenu
+          svg
+            circle
+              fill: $blueMenu
+            path
+              fill: white
+
+
+#userLoginMAIL
+  background: rgba(0,0,0,.36)
+
+  .popup-wrap
+    margin: 0 16px
+    height: auto
+    max-width: 420px
+    max-height: unset
+    border-radius: 20px
+    padding: 52px 16px 16px
+
+    @media (min-width: 768px)
+      padding: 36px 46px 34px 46px
+
+    p
+      text-align: center
+      margin-bottom: 12px
+      @media (min-width: 767px)
+        margin-bottom: 26px
+
+    h3
+      text-align: center
+      margin-top: 0
+      margin-bottom: 12px
+    .login__popup-content
+      padding-bottom: 0
+
+.address_authorized
+  .ordering__address
+    &.registered
+      display: block
+      max-width: 668px
+
+      .ordering__address-wrapper
+        justify-content: start
+        flex-direction: row
+        align-items: center
+
+        margin-top: 30px
+
+        button
+          margin-right: 25px
+          width: fit-content
+
+        a
+          align-items: center
+          margin-top: 0
+
+          svg
+            align-self: center
+
+    &-inner
+      .ordering__input-row
+        &:not(:last-child)
+          margin-bottom: 15px
+
+      label
+        width: 100%
+        line-height: 20px
+        padding: 24px
+        border: 1px solid $border-grey-2
+        border-radius: 8px
+        align-items: flex-start
+
+      input[type='radio']:not(:disabled):checked + label
+        border: 2px solid $blueMenu
+
+    &-text
+      h4
+        line-height: 20px
+      p
+        font-size: 16px
+        color: $grey
+
+.data-access__link
+  margin-top: 6px
+  align-self: flex-end
+  color: $link-green
+  text-decoration: underline
+
+  &:hover
+    text-decoration: none
+
+  &.confirmed
+    position: relative
+    text-decoration: none
+    cursor: default
+
+  &.confirmed::before
+    position: absolute
+    content: url("../images/access-link-confirmed.svg")
+    left: -21px

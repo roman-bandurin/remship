@@ -1,0 +1,290 @@
+.discounts
+  margin-bottom: 80px
+
+  @media (min-width: 1300px)
+    margin-bottom: 87px
+
+.disounts__title
+  margin: 30px 0 48px
+
+  @media (min-width: 768px)
+    margin: 24px 0 30px
+
+  @media (min-width: 1300px)
+    margin: 40px 0 48px
+
+.discounts__big-banners 
+  display: flex
+  flex-direction: column
+
+  @media (min-width: 1200px)
+    flex-direction: row
+
+
+  .special-offer__link
+    margin-left: 0
+    max-width: 100%
+
+    @media (min-width: 450px)
+      border-radius: 8px
+
+    @media (min-width: 768px) 
+      margin: 0 auto
+
+    @media (min-width: 1200px) 
+      width: 49%
+      max-width: 900px
+  
+
+    @media (max-width: 449px)
+      flex-direction: column
+      padding: 35px 20px 20px
+      margin-left: 0
+
+    & + .special-offer__link
+      margin-top: 56px
+
+      @media (min-width: 450px)
+        margin-top: 40px
+
+      @media (min-width: 1200px) 
+        margin-left: 36px
+        margin-top: 0
+
+  .special-offer__text-block
+    @media (min-width: 450px) 
+      padding-top: 40px
+    
+    @media (min-width: 550px) 
+      padding-top: 50px
+      display: flex
+      flex-direction: column
+
+    @media (max-width: 449px)
+      order: 1
+      width: 100%
+      padding-left: 0
+
+    h3 
+      font-size: 20px
+      line-height: 140%
+
+      @media (min-width: 450px) and (max-width: 549px) 
+        font-size: 14px
+    
+      @media (min-width: 550px) and (max-width: 699px) 
+        font-size: 17px
+
+    p 
+      font-size: 14px
+      line-height: 140%
+
+      @media (min-width: 450px) and (max-width: 549px) 
+        font-size: 12px
+    
+
+      @media (min-width: 768px) 
+        font-size: 16px
+    
+      @media (min-width: 1200px) 
+        margin-bottom: 33px
+
+    .special-offer__more-info 
+      margin-top: auto
+
+      @media (max-width: 449px) 
+        position: relative
+        font-size: 16px
+        line-height: 20px
+        color: #009fe3
+        padding-right: 18px
+
+        &::before
+          content: ""
+          position: absolute
+          top: 50%
+          right: 0
+          width: 13px
+          height: 13px
+          background-image: url(../icons/arrow-blue.svg)
+          background-size: contain
+          background-repeat: no-repeat
+          background-position: center
+          transform: translateY(-45%) rotate(-90deg)
+          
+
+
+  .special-offer__image-block    
+    @media (min-width: 450px) 
+      width: 53%
+
+    @media (min-width: 600px) 
+      width: 38%
+  
+
+    @media (min-width: 1400px) 
+      width: 33%
+    
+    @media (max-width: 449px) 
+      width: 100%
+      padding: 0
+      margin: 0
+
+  .special-offer__period
+    font-size: 12px
+    line-height: 140%
+    padding: 7px 11px
+    text-transform: uppercase
+
+    @media (min-width: 450px) 
+      font-size: 13px
+  
+    @media (min-width: 550px) 
+      font-size: 14px
+
+    @media (max-width: 449px) 
+      top: -15px
+      left: 50%
+      transform: translateX(-50%)
+      border-radius: 17px
+      width: max-content
+
+.discounts__small-banners 
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  @media (min-width: 550px) 
+    margin-top: 22px
+    flex-direction: row
+    flex-wrap: wrap
+    margin: 0 auto
+
+  @media (min-width: 630px) 
+    // justify-content: space-between
+
+  @media (min-width: 1200px) 
+    margin-top: 36px
+    
+  a 
+    width: 100%
+    max-width: 350px
+    display: block
+    margin: 56px auto 0
+    position: relative
+    border-radius: 4px
+
+    @media (min-width: 630px) 
+      width: 47%
+      margin: 56px auto 0
+      max-width: 310px
+
+      @media (min-width: 1200px) 
+        margin: 56px 45px 0
+
+    // @media (min-width: 860px) 
+    //   width: 33.33333%
+    //   margin: 56px auto 0
+
+
+    img
+      width: 100%
+      border-radius: 4px
+
+    .small-banner__period 
+      position: absolute
+      top: -15px
+      left: 50%
+      transform: translateX(-50%)
+      background-color: #cf4949
+      border-radius: 17px
+      width: max-content
+      font-weight: 600
+      color: #efeded
+      font-size: 12px
+      line-height: 140%
+      padding: 7px 11px
+      text-transform: uppercase
+      
+.discounts__one-banner
+  background-repeat: no-repeat
+  background-size: cover 
+  background-position: center
+  margin-top: 51px
+  position: relative
+  padding: 20px
+  min-height: 203px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  max-width: 2095px
+  margin: 51px auto 0
+
+  @media (min-width: 768px) 
+    padding: 30px
+
+  @media (min-width: 1200px) 
+    min-height: 419px
+    padding: 43px
+    justify-content: center
+    margin-top: 92px
+
+  &:hover 
+    .one-banner__more span::before
+      right: -7px
+
+  h2
+    font-weight: 900
+    font-family: "MontserratMedium"
+    font-size: 16px
+    line-height: 150%
+    text-transform: uppercase
+    color: #FFFFFF
+    margin-top: 25px
+
+    @media (min-width: 768px) 
+      margin-top: 0
+      margin-bottom: 30px
+
+    @media (min-width: 1200px) 
+      font-size: 34px
+
+  .one-banner__more
+    font-weight: 500
+    font-family: "MontserratMedium"
+    font-size: 14px
+    line-height: 20px
+    color: #FFFFFF
+
+    span 
+      position: relative
+      padding-right: 15px
+
+      &::before
+        content: ''
+        position: absolute
+        width: 10px
+        height: 10px
+        background-image: url(../icons/arrow-white.svg)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+        right: 0
+        top: 50%
+        transform: translateY(-40%)
+        transition: all .3s ease
+
+  .one-banner__period
+    position: absolute
+    top: -15px
+    left: 50%
+    transform: translateX(-50%)
+    background-color: #cf4949
+    border-radius: 17px
+    width: max-content
+    font-weight: 600
+    color: #efeded
+    font-size: 12px
+    line-height: 140%
+    padding: 7px 11px
+    text-transform: uppercase

@@ -1,0 +1,110 @@
+.others 
+  margin-top: 40px
+  padding-bottom: 70px
+
+  @media (min-width: 768px)
+    margin-top: 76px
+    padding-bottom: 80px
+
+  @media (min-width: 1300px)
+    margin-top: 101px
+    padding-bottom: 20px
+ 
+.others__top
+  display: flex
+  justify-content: space-between
+
+  .others__title 
+    &.block-title
+      @media (min-width: 1300px)
+        margin-bottom: 0
+
+.others__btns 
+  width: max-content
+  height: max-content
+
+  @media (min-width: 768px)
+    display: flex
+
+  @media (max-width: 767px)
+    display: none
+
+.others__slider
+  overflow: visible
+
+  @media (min-width: 1300px)
+    min-height: 510px
+    //overflow-x: hidden
+    overflow-y: visible
+    //padding-top: 34px
+
+  @media (max-width: 767px)
+    padding-right: 16px
+
+  .swiper-slide
+    box-sizing: border-box
+
+.others__pagination 
+  font-weight: 500
+  font-family: "MontserratMedium"
+  font-size: 16px
+  line-height: 20px
+  color: #25252A
+
+.others__btn-next, .others__btn-prev
+  width: 40px
+  height: 40px
+  border: 1px solid #009FE3
+  border-radius: 50%
+  position: relative
+  cursor: pointer
+  transition: all .3s ease
+
+  &::before 
+    content: ''
+    position: absolute
+    width: 18px
+    height: 18px
+    background-image: url(../icons/arrow-black.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    transition: all .3s ease
+    top: 50%
+    left: 55%
+    transform: translateX(-50%) translateY(-50%)
+  
+  &.swiper-button-disabled
+    border: 1px solid #E2E2E2
+    cursor: default
+
+    &:hover
+      background-color: transparent
+      
+      &::before
+        background-image: url(../icons/arrow-black.svg)
+        background-repeat: no-repeat
+
+  &:hover 
+    background-color: $blueHover
+
+    &::before 
+      background-image: url(../icons/arrow-white.svg)
+
+.others__btn-prev
+  &::before 
+    left: 50%
+    transform: translateX(-50%) translateY(-50%) rotate(180deg)
+
+.others__pagination 
+  display: inline
+  text-align: center
+  font-weight: 500
+  font-family: "MontserratMedium"
+  font-size: 16px
+  line-height: 40px
+  color: #101C29
+  width: 70px
+
+  @media (max-width: 767px)
+    display: none

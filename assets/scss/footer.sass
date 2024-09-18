@@ -1,0 +1,290 @@
+.footer
+  background: linear-gradient(0deg, rgba(133, 198, 227, 0.45) 0%, rgba(255, 255, 255, 0.45) 100%), linear-gradient(93.26deg, #DDF2F9 -19.63%, #CADFF1 55.26%, #CEFEFA 112.85%)
+
+.footer__top
+  padding-top: 40px
+
+  @media (min-width: 1300px)
+    padding: 50px 50px 0
+
+.footer__top-inner
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.footer__top-block
+  margin-bottom: 24px
+
+  @media (min-width: 340px) and (max-width: 674px)
+    width: 48%
+
+  &:nth-child(4)
+    @media (min-width: 1300px)
+      order: 1
+    
+  &:nth-child(3)
+    @media (min-width: 1300px)
+      order: 2
+
+  &:nth-child(2)
+    @media (min-width: 1300px)
+      order: 3
+
+  &:nth-child(5)
+    @media (min-width: 1300px)
+      order: 4
+
+
+  h3
+    font-weight: 600
+    font-family: "MontserratMedium"
+    font-size: 16px
+    line-height: 20px
+    color: #25252A
+    margin-bottom: 14px
+
+    @media (min-width: 1300px)
+      margin-bottom: 16px
+
+  ul
+    li 
+      font-size: 13px
+      line-height: 140%
+      color: #25252A
+      margin-bottom: 8px
+
+      @media (min-width: 1300px)
+        font-size: 14px
+
+      @media (max-width: 499px)
+        max-width: 200px
+
+  a 
+    display: block
+
+  &.footer__contacts-block
+    // width: 100%
+
+    li 
+      max-width: 100%
+
+    h3 
+      @media (max-width: 1299px)
+        display: none
+
+  .footer-menu__desktop-item
+    @media (max-width: 1299px)
+      display: none
+
+
+.footer__desktop-block
+  &__image
+    width: 100%
+    height: 100%
+
+  @media (max-width: 1400px)
+    display: none
+
+.footer__contacts-top
+  &-list
+    @media (max-width: 1300px)
+      display: none
+    li 
+      font-size: 14px
+      line-height: 140%
+
+      &.footer__contacts-tel
+        font-weight: 600
+        font-size: 16px
+        line-height: 20px
+        color: #25252A
+
+      &.footer__contacts-mail
+        a 
+          position: relative
+
+          &::after 
+            content: ''
+            position: absolute
+            width: 100%
+            height: 1px 
+            background-color: #25252A
+            bottom: 2px
+            left: 0
+            transition: all .15s ease
+
+        &:hover 
+          a
+            &::after 
+              opacity: 0
+              visibility: hidden
+
+
+      a 
+        display: inline-block
+
+    &-mobile
+      .tel
+        font-weight: 600
+        font-size: 16px
+        line-height: 20px
+        color: #25252A
+
+      @media (min-width: 1300px)
+          display: none
+
+.footer__contacts-bottom
+  @media (min-width: 1300px)
+    display: none
+
+
+.footer__social-list
+  display: flex
+  margin-top: 24px
+
+  @media (min-width: 768px)
+    margin-top: 32px
+
+  a 
+    & + a
+      margin-left: 12px
+
+    svg 
+      circle, .circle
+        transition: all .2s ease
+
+    &:hover
+      svg 
+        circle, .circle
+          fill: #3BB5E9
+          transition: all .2s ease
+
+  @media (min-width: 1300px)
+    justify-content: center
+    margin-top: 27px
+
+.footer-menu__mobile-item
+  @media (min-width: 1300px)
+    display: none
+
+.footer__bottom
+  border-top: 1px solid #FFFFFF
+
+.footer__bottom-inner
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 12px 0
+
+.footer__copyright
+  span 
+    font-size: 13px
+    line-height: 16px
+    letter-spacing: 0.015em
+    color: #565962
+
+    @media (min-width: 1300px)
+      color: #101C29
+
+    &:last-child
+      @media (max-width: 1299px)
+        display: none
+
+.footer__studio
+  display: block
+  transition: all .3s ease
+
+  &:hover
+    opacity: .6
+
+.footer__studio-mobile
+  width: 100%
+  height: 100%
+
+  @media (min-width: 1300px)
+    display: none
+
+.footer__studio-desktop
+  width: 100%
+  height: 100%
+
+  @media (max-width: 1299px)
+    display: none
+
+
+.search-desktop__box
+    width: 23px
+    height: 40px
+    transition: all .3s
+    overflow: hidden
+    cursor: pointer
+    position: relative
+
+    &.opened
+      width: 185px
+
+      @media (min-width: 860px)
+        width: 250px
+
+      @media (min-width: 1500px)
+        width: 320px
+
+      &::before
+        display: none
+
+    &::before
+      content: ''
+      position: absolute
+      width: 25px
+      height: 21px
+      top: 50%
+      transform: translateY(-50%)
+      right: 0
+      background-image: url(../icons/search.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      transition: all .3s ease
+
+.search-desktop__inner
+    width: 100%
+    height: 36px
+    display: flex
+    justify-content: space-between
+    padding: 3px
+
+.search-desktop__inner > input
+    display: none
+    height: 36px
+    width: 87.2%
+    background: #FFFFFF
+    border-radius: 8px
+    border: none
+    padding: 10px
+
+.search-desktop__inner > button
+    position: absolute
+    width: 0
+    height: 21px
+    background-image: url(../icons/search.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    top: 50%
+    right: -3px
+    transform: translateY(-50%)
+
+    @media (min-width: 1500px)
+      right: -8px
+
+
+.documents__btn-next, .documents__btn-prev 
+  cursor: pointer
+
+.footer__top-block
+  ul
+    li 
+      transition: all .2s ease
+
+      &:hover
+        color: #5D7687

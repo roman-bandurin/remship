@@ -1,0 +1,94 @@
+.other-products
+  margin-top: 40px
+  padding-bottom: 50px
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  @media (min-width: 768px)
+    margin-top: 50px
+    padding-bottom: 60px
+  
+  @media (min-width: 1300px)
+    margin-top: 60px
+    padding-bottom: 10px
+
+.viewed__slider 
+  // margin: 0 -16px
+  // padding-left: 10px
+  position: relative
+
+  @media (min-width: 768px)
+    margin: 0
+    padding-left: 0
+
+  @media (min-width: 1300px)
+    overflow: visible
+    min-height: 490px
+
+// .viewed__list
+//   @media (min-width: 768px) and (max-width: 1299px)
+//     display: flex
+//     flex-wrap: wrap
+//     justify-content: space-between
+
+//   .viewed__item
+//     width: 148px
+//     // height: 272px
+
+//     @media (min-width: 768px)
+//       max-width: 316px
+//       // width: 20.5%
+//       // height: 407px
+  
+//.viewed__btn-next,.viewed__btn-prev
+//  width: 50px
+//  height: 50px
+//  background-color: #EFEDED
+//  position: absolute
+//  z-index: 2
+//  top: 40%
+//  transform: translateY(-50%)
+//  cursor: pointer
+//  transition: all .3s ease
+//
+//  @media (max-width: 1299px)
+//    display: none
+//
+//  &:hover
+//    background-color: $blueMenu
+//
+//    &::before
+//      background-image: url(../icons/arrow-white.svg)
+//
+//  &::before
+//    content: ''
+//    position: absolute
+//    background-image: url(../icons/arrow-black.svg)
+//    background-repeat: no-repeat
+//    background-size: contain
+//    transition: all .3s ease
+//    top: 50%
+//    left: 50%
+//    transform: translateX(-50%) translateY(-50%)
+//    width: 17px
+//    height: 17px
+//
+//.viewed__btn-prev
+//  border-top-right-radius: 50%
+//  border-bottom-right-radius: 50%
+//  left: -33px
+//
+//  &::before
+//    transform: translateX(-50%) translateY(-50%) rotate(-180deg)
+//    left: 33%
+//
+//.viewed__btn-next
+//  border-top-left-radius: 50%
+//  border-bottom-left-radius: 50%
+//  right: -33px
+//
+//  &::before
+//    left: 65%

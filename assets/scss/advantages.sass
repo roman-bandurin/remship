@@ -1,0 +1,153 @@
+.advantages
+  background-color: #F7F8F9
+  padding: 40px 0 50px
+  position: relative
+
+  @media (min-width: 768px) 
+    padding: 60px 0
+
+  @media (min-width: 1300px) 
+    padding: 80px 0 100px
+
+  &::before 
+    content: ''
+    position: absolute
+    height: 100%
+    width: 100%
+    display: none
+    background-image: url(images/offer-bg.webp)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: top center
+    transform: scale(-1, 1)
+    opacity: .5
+
+    @media (min-width: 768px)
+      top: 0
+      // left: -130px
+      left: 54%
+      display: block
+
+    @media (min-width: 1300px)
+      left: 54.5%
+
+.advantages__list
+  display: flex
+  flex-direction: column
+
+  @media (min-width: 1300px) 
+    flex-direction: row
+
+  li
+    display: flex
+    flex-direction: column
+    max-width: 345px
+    opacity: 0
+    animation-fill-mode: forwards
+
+    @media (min-width: 768px) 
+      flex-direction: row
+      max-width: 666px
+
+    @media (min-width: 1300px) 
+      flex-direction: column
+      max-width: 100%
+      width: 30%
+
+    & + li 
+      margin-top: 40px
+
+      @media (min-width: 768px) 
+        margin-top: 57px
+
+      @media (min-width: 1300px) 
+        margin-left: 100px
+        margin-top: 0
+
+    &:first-child
+      .advantages__item-icon
+        .advantages__icon
+          &::before 
+            width: 25px
+            height: 25px
+            background-image: url(../icons/advantages-1.svg)
+
+            @media (min-width: 768px) 
+              width: 29px
+              height: 29px
+
+    &:nth-child(2)
+      .advantages__item-icon
+        .advantages__icon
+          &::before 
+            width: 25px
+            height: 25px
+            background-image: url(../icons/advantages-2.svg)
+
+            @media (min-width: 768px) 
+              width: 29px
+              height: 29px
+
+    &:nth-child(3)
+      .advantages__item-icon
+        .advantages__icon
+          &::before 
+            width: 27px
+            height: 27px
+            background-image: url(../icons/advantages-3.svg)
+
+            @media (min-width: 768px) 
+              width: 29px
+              height: 29px
+
+.advantages__icon
+  width: 54px
+  height: 54px
+  border-radius: 14px
+  background-color: #009FE3
+  position: relative
+  margin-bottom: 20px
+
+  @media (min-width: 768px) and (max-width: 1299px)
+    margin-bottom: 0
+
+  &::before 
+    content: ''
+    position: absolute
+    background-repeat: no-repeat
+    background-size: contain
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+
+.advantages__item-text
+  @media (min-width: 768px) and (max-width: 1299px)
+    margin-left: 39px
+
+  h3
+    font-weight: 600
+    font-family: "MontserratMedium"
+    font-size: 16px
+    line-height: 20px
+    color: #101C29
+    margin-bottom: 16px
+
+    @media (min-width: 768px) 
+      font-size: 18px
+      line-height: 22px
+      margin-bottom: 10px
+
+    @media (min-width: 1300px) 
+      font-size: 20px
+      line-height: 24px
+      margin-bottom: 16px
+
+  p
+    font-size: 16px
+    line-height: 140%
+    color: #101C29
+
+
+
+
+

@@ -1,0 +1,158 @@
+@import "base/variables"
+
+@keyframes load
+  from 
+    left: -150px
+  to
+    left: 100%
+  
+.main-slider
+  padding-top: 5px
+
+  .swiper-container
+    margin-top: 0
+
+  .swiper-container-horizontal>.swiper-pagination-bullets
+    bottom: 15px
+
+    @media (min-width: 1300px)
+      bottom: 20px
+
+  .swiper-pagination-bullet
+    width: 7px
+    height: 7px
+
+    @media (min-width: 1300px)
+      width: 12px
+      height: 12px
+
+.main-slider__inner
+  overflow: visible
+  position: relative
+
+  &.hidden
+    display: none
+
+.swiper-wrapper > .swiper-slide.main-slider__slide
+  position: relative
+  border-radius: 6px
+  opacity: .6
+  height: auto
+  transition: all .3s ease
+
+  @media (min-width: 768px)
+    padding-top: 0
+    width: 560px
+    //height: 301px
+    border-radius: 11px
+
+  @media (min-width: 1300px)
+    width: 1040px
+    height: 300px
+    border-radius: 16px
+
+  img
+    width: 100%
+    height: 100%
+    border-radius: 6px
+    object-fit: cover
+
+    @media (min-width: 768px)
+      position: unset
+      border-radius: 11px
+
+    @media (min-width: 1300px)
+      border-radius: 16px
+      //object-fit: contain
+
+  &.swiper-slide-active
+    opacity: 1
+
+.preloader
+  box-shadow: 0 4px 10px 0 rgba(33, 33, 33, 0.15)
+  overflow: hidden
+  position: relative
+  height: 200px
+
+  @supports (aspect-ratio: 5 / 2)
+    height: auto
+    aspect-ratio: 5 / 2
+
+  &.hidden
+    display: none
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: -150px
+    top: 0
+    height: 100%
+    width: 150px
+    background: linear-gradient(to right, transparent 0%, #E8E8E8 50%, transparent 100%)
+    animation: 2s linear 0.3s infinite load
+  
+  @media (min-width: 768px)
+    aspect-ratio: unset
+    height: 320px
+
+.main-slider__pagination
+  @media (max-width: 767px)
+    display: none
+
+  .swiper-pagination-bullet
+    background: rgba(0, 0, 0, 0.89)
+    margin: 0 8px !important
+
+    @media (min-width: 1300px)
+      margin: 0 10px !important
+
+    &.swiper-pagination-bullet-active
+      background: $blueMenu
+  
+
+.main-slider__scrollbar
+  background: #EFF2F3
+  border-radius: 1px
+  height: 2px !important
+  bottom: -15px !important
+
+  @media (min-width: 768px)
+    display: none
+
+  .swiper-scrollbar-drag
+    background: #4198F7
+    border-radius: 1px
+    height: 2px
+
+
+.main-slider__image-mobile 
+    @media (min-width: 1300px)
+      display: none
+
+.main-slider__image-desktop 
+
+  @media (min-width: 1300px)
+    display: block
+
+.main-slider__navigation
+  position: absolute
+  z-index: 1
+  width: 100%
+  top: 50%
+  transform: translateY(-50%)
+
+  .round-button-outlined__pagination-wrapper
+    position: relative
+    width: 100%
+    justify-content: space-between
+
+    .main-slider__btn-prev,
+    .main-slider__btn-next
+      position: absolute
+      top: 0
+      left: 0
+
+    .main-slider__btn-next
+      left: unset
+      right: 0

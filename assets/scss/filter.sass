@@ -1,0 +1,774 @@
+@import "base/variables"
+  
+.catalog__filters
+  width: 100%
+
+  @media (min-width: 1300px)
+    width: 312px
+
+  @media (min-width: 1600px)
+    width: 21%
+
+  @media (min-width: 2500px)
+    width: 22.8%
+
+.filters__button
+  width: 50%
+  height: 100%
+  cursor: pointer
+  padding: 14px 0
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 5px
+
+  //span
+  //  margin: 0 auto
+
+  svg
+    width: 17px
+    height: 17px
+    fill: #009FE3
+
+
+  @media (min-width: 1300px)
+    display: none
+
+.filter
+  display: none
+  transition: all .3s ease
+  opacity: 1
+  position: fixed
+  justify-content: center
+  align-items: center
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  background: rgba(0, 0, 0, 0.36)
+  z-index: 10000
+  padding: 0
+
+  @media (min-width: 768px)
+    justify-content: flex-start
+
+  @media (min-width: 1300px)
+    display: block
+    position: relative
+    border-radius: 8px
+    background: #F9FBFF
+    z-index: unset
+
+  &__head
+    position: relative
+    display: flex
+    padding: 22px 20px
+    width: 100%
+    align-items: center
+    background: #F8F8F8
+
+    @media (min-width: 1300px)
+      display: none
+
+    span
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      //font-family: 'Montserrat', 'sans-serif'
+      font-style: normal
+      font-weight: 600
+      font-size: 16px
+      line-height: 20px
+
+  &__close
+    cursor: pointer
+    position: relative
+    width: 12px
+    height: 12px
+
+    @media (min-width: 768px)
+      width: 16px
+      height: 16px
+
+    &:before, &:after
+      position: absolute
+      top: 0
+      right: 0
+      content: ''
+      display: block
+      height: 100%
+      width: 1px
+      border: 1px solid $black
+
+    &:before
+      transform: rotate(45deg)
+
+    &:after
+      transform: rotate(-45deg)
+
+  &.visible
+    display: flex
+
+    .filter__body-wrapper
+      animation-name: filterMobile
+      animation-duration: .4s
+      animation-fill-mode: forwards
+
+
+.filter__body-wrapper
+  margin: 0
+  z-index: 2
+  width: 100%
+  height: 100%
+  overflow-y: auto
+  background: #fff
+  position: relative
+  box-shadow: 0 3px 29px rgba(0, 0, 0, 0.13)
+
+  &::-webkit-scrollbar
+    width: 8px
+    height: 1px
+    background-color: transparent
+
+
+  &::-webkit-scrollbar-thumb
+    background-color: #D8EDF6
+    border-radius: 60px
+
+
+  &::-webkit-scrollbar-track
+    background-color: transparent
+
+
+  @media (min-width: 768px)
+    max-width: 443px
+
+  @media (min-width: 1300px)
+    max-width: 100%
+    box-shadow: none
+    overflow-y: unset
+
+.filter__body
+  padding: 0 16px
+
+  @media (min-width: 1300px)
+    padding: 0
+
+.filter-item
+  padding: 25px 0 27px
+  border-bottom: 1px solid #E2E2E2
+
+  &:last-child
+    border-bottom: none
+
+  &.opened
+    .filter-item__header
+      &::before
+        transform: translateY(-50%) rotate(-90deg)
+
+    .filter-item__body
+      display: block
+
+  &__consumable
+    .filter-item__body
+    ul li
+      input
+        position: absolute
+        z-index: -1
+        opacity: 0
+        right: 0
+
+        &:checked
+          & + label
+            &::before
+              background: #4198F7
+
+            &::after
+              right: 2px
+              background-color: #fff
+
+      label
+        position: relative
+        padding-right: 73px
+        font-weight: 500
+        font-family: "MontserratMedium", sans-serif
+        font-size: 16px
+        line-height: 20px
+        color: #25252A
+
+        &::before
+          content: ''
+          position: absolute
+          width: 46px
+          height: 25px
+          top: 50%
+          transform: translateY(-50%)
+          right: 0
+          border-radius: 16px
+          background-color: #EFEDED
+          transition: .3s
+
+        &::after
+          content: ''
+          position: absolute
+          top: 0
+          right: 24px
+          width: 20px
+          height: 20px
+          border-radius: 50%
+          background-color: #FFFFFF
+          transition: .2s
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25)
+
+.filter-item__header
+  position: relative
+  cursor: pointer
+
+  h3
+    font-weight: 600
+    font-family: "MontserratMedium", sans-serif
+    font-size: 16px
+    line-height: 20px
+    color: #101C29
+
+  &::before
+    content: ''
+    position: absolute
+    width: 14px
+    height: 14px
+    top: 45%
+    right: 0
+    transform: translateY(-50%) rotate(90deg)
+    background-image: url(../icons/arrow-black.svg)
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+
+
+.filter-item__body
+  padding-top: 22px
+
+.filter-item__list
+  display: flex
+  flex-direction: column
+
+  li
+    padding: 9px 22px
+    margin: 0 -22px
+    cursor: pointer
+    transition: all .3s ease
+    display: inline-block
+    position: relative
+
+    &.active
+      a
+        color: $blueMenu
+
+    a, span
+      font-size: 16px
+      line-height: 20px
+      color: #101C29
+      cursor: pointer
+      transition: all .2s ease
+
+      &:hover
+        color: $blueMenu
+
+    .checkbox__hidden
+      display: none
+
+    &.opened
+      background: #D8EDF6
+      font-weight: 500
+      font-family: "MontserratMedium", sans-serif
+
+      &:hover
+        label
+          color: #101C29
+
+      &.categories__sublist-header
+        label
+          padding: 0 0 9px
+          display: block
+
+        .categories__sublist
+          margin-top: 9px
+
+          label
+            display: inline
+
+.categories__sublist
+  display: none
+  margin: 10px -22px -10px -22px
+  background-color: #f9fbff
+  padding: 0 22px 7px 34px
+
+  ul
+    display: flex
+    flex-direction: column
+
+    li
+      position: relative
+
+      &::before
+        content: ''
+        position: absolute
+        width: 4px
+        height: 4px
+        background: #6D757F
+        top: 50%
+        left: 10px
+        transform: translateY(-50%)
+        border-radius: 50%
+
+      a
+        font-size: 14px
+        line-height: 17px
+        color: #101C29
+        opacity: 0.6
+        transition: all .2s ease
+
+      &:hover
+        color: #009FE3
+
+        a
+          color: #009FE3
+          opacity: 1
+
+.filter-item__range
+  .range-filter__header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 30px
+
+  label
+    display: flex
+    flex-direction: column
+
+  input
+    border: 1px solid #EFEDED
+    height: 45px
+    width: 130px
+    border-radius: 5px
+    padding: 12px
+
+.connect
+  height: 1px
+  border-radius: 1px
+  width: 20px
+  background-color: #efeded
+
+.noUi-horizontal
+  height: 6px !important
+
+  .noUi-handle
+    width: 20px !important
+    height: 20px !important
+    right: -15px !important
+    top: -9px !important
+    border-radius: 100% !important
+
+    border: none !important
+    background: #009FE3 !important
+    box-shadow: none !important
+
+    &:before
+      width: 8px
+      height: 8px
+      background-color: white
+      border-radius: 100%
+      left: 6px
+      top: 6px
+
+    &:after
+      display: none !important
+
+.noUi-connect
+  background: $blueMenu !important
+
+.checkbox__visible
+  &.jq-checkbox
+    margin-right: 10px
+    cursor: pointer
+    width: 20px
+    height: 20px
+    background: #F5F5F5
+    border: 1px solid #E2E2E2
+    border-radius: 3px
+    box-shadow: none
+
+    &.checked
+      background: #4198F7
+      border: 1px solid #4198F7
+
+      .jq-checkbox__div
+        border-color: #fff
+        width: 12px
+        height: 6px
+        margin: 4px 0 0 3px
+        transform: rotate(-49deg)
+
+.irs--flat
+  .irs-line
+    margin-top: 30px
+    height: 2px
+    background: #E2E2E2
+    border-radius: 2px
+
+  .irs-min, .irs-max
+    display: none
+
+  .irs-from, .irs-to
+    width: 120px
+    position: absolute
+    padding: 6px 12px
+    font-size: 16px
+    line-height: 20px
+    color: #25252A
+    background: #FFFFFF
+    border: 1px solid #D8EDF6
+    border-radius: 7px
+    visibility: visible !important
+    top: -35px
+    font-family: "MontserratMedium", sans-serif
+
+    &::before
+      display: none
+
+    &::after
+      content: ' ₽'
+
+  .irs-from
+    left: 0 !important
+
+  .irs-to
+    left: 145px !important
+    right: 10px !important
+
+    &::before
+      display: block
+      border: none
+      width: 16px
+      height: 1px
+      background: #D8EDF6
+      border-radius: 1px
+      bottom: 0
+      top: 50%
+      left: -18px
+
+  .irs-bar
+    height: 2px
+    background: #4198F7
+
+  .irs-single
+    display: none
+
+  .irs-handle
+    &.to, &.from
+      top: 19px
+
+      i
+        border-radius: 50%
+        width: 14px
+        height: 14px
+        box-sizing: border-box
+
+        &:first-child
+          cursor: pointer
+          background: #4198F7
+
+          &::before
+            content: ''
+            position: absolute
+            width: 5px
+            height: 5px
+            border-radius: 55%
+            background: #EFF7FF
+            top: 50%
+            left: 50%
+            transform: translateY(-50%) translateX(-50%)
+
+.filter-mobile
+  display: none
+  transition: all .3s ease
+  opacity: 1
+  position: fixed
+  justify-content: center
+  align-items: center
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  background: rgba(0, 0, 0, 0.36)
+  z-index: 10000
+  overflow-y: auto
+  padding: 0
+
+  @media (min-width: 768px)
+    justify-content: flex-start
+
+  @media (min-width: 1300px)
+    display: none !important
+
+  &.visible
+    display: flex
+
+    .filter-mobile__wrap
+      animation-name: filterMobile
+      animation-duration: .4s
+      animation-fill-mode: forwards
+
+  .checkbox__hidden
+    display: none
+
+.filter-mobile__wrap
+  position: relative
+  margin: 0
+  background: #FFFFFF
+  box-shadow: 0 3px 29px rgba(0, 0, 0, 0.13)
+  padding: 0
+  z-index: 2
+  width: 100%
+  height: 100%
+
+  @media (min-width: 768px)
+    max-width: 443px
+
+.filter-mobile__item-body
+  display: none
+
+.filter-mobile__header
+  background-color: #F8F8F8
+  padding: 18px 0
+
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @media (min-width: 768px)
+      padding: 0 16px
+
+  .filter-mobile__close
+    position: relative
+    width: 70px
+    height: 15px
+
+    #filterCloseBtn
+      width: 15px
+      height: 15px
+
+      &::before, &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 10px
+        border-radius: 1px
+        background-color: #101C29
+        width: 2px
+        height: 100%
+        transform: translateX(50%)
+
+      &::before
+        transform: translateX(-200%) rotate(45deg)
+
+      &::after
+        transform: translateX(-200%) rotate(-45deg)
+
+  .filter-mobile__title
+    flex-grow: 1
+    text-align: center
+    font-weight: 600
+    font-family: "MontserratMedium", sans-serif
+    font-size: 16px
+    line-height: 20px
+    color: #000000
+
+  button
+    font-size: 14px
+    line-height: 17px
+    color: #009FE3
+    cursor: pointer
+
+.filter-mobile__main
+  padding-top: 24px
+  background-color: #fff
+  padding-bottom: 20px
+
+  .container
+    @media (min-width: 768px)
+      padding: 0 16px
+
+.filter-mobile__item
+  padding: 16px 0
+  border-bottom: 1px solid #F0F0F0
+
+  &:first-child
+    border-top: 1px solid #F0F0F0
+
+  &.opened
+    .filter-mobile__item-header
+      &::after
+        display: none
+
+  &.filter-item__consumable
+    .filter-mobile__item-list
+      margin-top: 0
+
+    .filter-mobile__item-body
+      ul li
+        input
+          position: absolute
+          z-index: -1
+          opacity: 0
+          right: 0
+
+          &:checked
+            & + label
+              &::before
+                background: #4198F7
+
+              &::after
+                right: 2px
+                background-color: #fff
+
+        label
+          position: relative
+          padding-right: 73px
+          display: inline-block
+          width: 100%
+          font-size: 16px
+          line-height: 20px
+          color: #25252A
+
+          &::before
+            content: ''
+            position: absolute
+            width: 46px
+            height: 25px
+            top: 50%
+            transform: translateY(-50%)
+            right: 0
+            border-radius: 16px
+            background-color: #EFEDED
+            transition: .3s
+
+          &::after
+            content: ''
+            position: absolute
+            top: 0
+            right: 24px
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            background-color: #FFFFFF
+            transition: .2s
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25)
+
+  .filter-mobile__item-header
+    position: relative
+
+    &::after
+      content: ''
+      position: absolute
+      width: 14px
+      height: 14px
+      right: 8px
+      top: 50%
+      transform: translateY(-50%)
+      background-image: url(../icons/arrow-grey.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      transition: all .2s ease
+
+    &:hover
+      &::after
+        right: 0
+
+    h3
+      font-size: 16px
+      line-height: 20px
+      color: #101C29
+      font-weight: 400
+      font-family: "MontserratMedium", sans-serif
+
+  .irs--flat
+    .irs-line
+      margin-top: 55px
+      height: 6px
+      border-radius: 5px
+
+    .irs-to, .irs-from
+      width: 45%
+      height: 44px
+      line-height: 28px
+
+    .irs-to
+      left: 55% !important
+
+      &::before
+        left: -23px
+
+    .irs-bar
+      height: 6px
+
+    .irs-handle
+      &.to, &.from
+        top: 18px
+
+        i
+          border-radius: 50%
+          width: 20px
+          height: 20px
+
+          &:first-child
+            &::before
+              width: 8px
+              height: 8px
+              top: 50%
+              left: 50%
+
+.filter-mobile__item-list
+  margin-top: 20px
+
+  li
+    & + li
+      margin-top: 24px
+
+.filter-mobile__btn, .filter-mobile__item-btn
+  display: block
+  width: 100%
+  padding: 12px
+  background: #009FE3
+  border-radius: 8px
+  font-weight: 500
+  font-size: 16px
+  line-height: 20px
+  text-align: center
+  color: #FFFFFF
+  font-family: "MontserratMedium", sans-serif
+  margin: 30px 0 0
+
+.categories-mobile__sublist
+  display: none
+
+.filter-mobile__item-inner
+  &.filter-item__consumable
+    .filter-mobile__item-body
+      display: block
+
+@keyframes filterMobile
+  from
+    transform: translateX(-1000%)
+
+  to
+    transform: translateX(0)
+
+@keyframes filterMobileClose
+  from
+    transform: translateX(0)
+
+  to
+    transform: translateX(-1000%)

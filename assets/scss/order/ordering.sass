@@ -1,0 +1,1093 @@
+.ordering__title
+  padding: 30px 0
+  margin-bottom: 0
+
+  @media (min-width: 768px)
+    padding: 24px 0
+
+  @media (min-width: 1300px)
+    padding: 43px 0 60px
+
+.ordering__wrapper
+  display: flex
+  align-items: flex-start
+  flex-direction: column 
+
+  @media (min-width: 1300px)
+    flex-direction: row
+    justify-content: space-between
+
+    .ordering__inner
+      max-width: 900px
+      margin-right: 40px
+
+.ordering__block-header
+  position: relative
+  margin-bottom: 30px
+
+  @media (min-width: 768px)
+    margin-bottom: 24px
+
+  @media (min-width: 1300px)
+    margin-bottom: 32px
+
+  h2 
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    padding-left: 36px
+    font-size: 20px
+    line-height: 24px
+    color: #101C29
+
+    @media (min-width: 768px)
+      font-weight: 600
+      font-family: "MontserratMedium", sans-serif
+      padding-left: 0
+
+    @media (min-width: 1300px)
+      font-size: 24px
+      line-height: 29px
+      // padding-left: 12px
+
+.ordering__login-mobile
+  background: rgba(196, 196, 196, .1)
+  border-radius: 8px
+  padding: 20px 20px 22px
+
+  @media (min-width: 768px)
+    display: none
+
+  p
+    font-size: 14px
+    line-height: 140%
+    color: $text-grey
+    margin-bottom: 16px
+
+  div 
+    display: inline 
+    position: relative
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    font-size: 16px
+    line-height: 140%
+    color: #009FE3
+
+    &:hover, &:focus 
+      &::after 
+        animation-duration: .45s
+        animation-name: underline
+        animation-fill-mode: forwards
+
+    &::after 
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      bottom: 2px
+      width: 100%
+      height: 1px
+      background-color: #009FE3
+      transition: width 0.3s ease-out
+
+.ordering__order-list
+  margin-bottom: 30px
+
+  @media (min-width: 768px)
+    margin-bottom: 50px
+
+  @media (min-width: 1300px)
+    margin-bottom: 120px
+
+  .cart-item
+    border-top: none
+    border-bottom: 1px solid #e2e2e2
+
+    &__delete-button
+      margin-left: 10px
+
+    &:first-child
+      border-top: 1px solid #e2e2e2
+
+      @media (min-width: 768px)
+        border-top: none
+
+.ordering__form-block
+  position: relative
+  transition: .3s ease
+
+  &:not(:last-child)
+    &::before
+      display: none
+
+      @media (min-width: 768px)
+        display: block
+        content: ''
+        position: absolute
+        height: 100%
+        width: 1px
+        background-color: #B7BBBE
+        left: 12px
+
+      @media (min-width: 1300px)
+        left: 13px
+
+  @media (min-width: 768px)
+    padding-left: 40px
+    max-width: 700px
+
+  @media (min-width: 1300px)
+    padding-left: 50px
+    max-width: 870px
+
+  &:first-child
+    padding-bottom: 44px
+
+    @media (min-width: 768px)
+      padding-bottom: 64px
+
+    @media (min-width: 1300px)
+      padding-bottom: 87px
+
+  &:nth-child(2)
+    padding-bottom: 50px
+
+    @media (min-width: 768px)
+      padding-bottom: 60px
+
+    @media (min-width: 1300px)
+      padding-bottom: 80px
+
+  &:nth-child(3)
+    padding-bottom: 50px
+
+    @media (min-width: 768px)
+      padding-bottom: 60px
+
+    @media (min-width: 1300px)
+      padding-bottom: 83px
+
+.ordering__form-block.done
+  &:not(:last-child)
+    &::after
+      display: none
+
+      @media (min-width: 768px)
+        display: block
+        content: ''
+        position: absolute
+        height: 100%
+        width: 1px
+        background-color: #009FE3
+        left: 12px
+        top: 0
+
+      @media (min-width: 1300px)
+        left: 13px
+
+  .ordering__block-line
+    border: 1px solid #009FE3
+    background-color: #D8EDF6
+    p
+      color: #009FE3
+
+
+
+.one-click__mobile, .one-click
+  padding-top: 30px
+  font-size: 16px
+  line-height: 140%
+  color: #101C29
+  margin-bottom: 39px
+
+  @media (min-width: 768px)
+
+    padding-top: 40px
+
+  span
+    color: #009FE3
+    cursor: pointer
+    position: relative
+
+    &:hover, &:focus 
+      &::after 
+        animation-duration: .45s
+        animation-name: underline
+        animation-fill-mode: forwards
+
+    &::after 
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      bottom: 2px
+      width: 100%
+      height: 1px
+      background-color: #009FE3
+      transition: width 0.3s ease-out
+
+.one-click 
+  @media (max-width: 767px)
+    display: none
+
+.one-click__mobile 
+  @media (min-width: 768px)
+    display: none
+  
+.ordering__login
+  display: flex
+  justify-content: space-between
+  background: rgba(196, 196, 196, .1)
+  border-radius: 8px
+  padding: 20px
+
+  white-space: normal
+
+  @media (min-width: 768px)
+    padding: 22px
+    max-width: 749px
+
+  @media (max-width: 767px)
+    display: none
+
+  p
+    font-size: 14px
+    line-height: 140%
+    color: $text-grey
+    margin-right: 30px
+    max-width: 402px
+
+    @media (min-width: 1300px)
+      max-width: 529px
+      margin-right: 21px
+
+  div
+    white-space: nowrap
+    display: inline
+    position: relative
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    font-size: 16px
+    line-height: 140%
+    color: #009FE3
+    cursor: pointer
+    height: max-content
+
+    &:hover, &:focus 
+      &::after 
+        animation-duration: .45s
+        animation-name: underline
+        animation-fill-mode: forwards
+
+    &::after 
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      bottom: 4px
+      width: 100%
+      height: 1px
+      background-color: #009FE3
+      transition: width 0.3s ease-out
+
+
+.ordering__block-line
+  width: 24px
+  height: 24px
+  border-radius: 50%
+  background-color: white
+  border: 1px solid #B7BBBE
+  position: absolute
+  z-index: 2
+
+
+  @media (min-width: 768px)
+    left: -38px
+
+  @media (min-width: 1300px)
+    width: 34px
+    height: 34px
+    left: -52px
+
+  p 
+    font-weight: 600
+    font-family: "MontserratMedium", sans-serif
+    font-size: 13px
+    line-height: 16px
+    color: #B7BBBE
+    text-align: center
+    position: absolute
+    top: 50%
+    transform: translateY(-50%) translateX(-50%)
+    left: 50%
+
+    @media (min-width: 768px)
+      font-size: 15px
+      line-height: 18px
+
+    @media (min-width: 1300px)
+      font-size: 20px
+      line-height: 24px
+
+
+
+  h3 
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    font-size: 16px
+    line-height: 20px
+    color: #101C29
+
+    @media (min-width: 768px)
+      font-weight: 600
+      font-family: "MontserratMedium", sans-serif
+
+
+    @media (min-width: 1300px)
+      font-size: 20px
+      line-height: 24px
+
+  .ordering__input-row
+    margin-top: 22px
+
+    @media (min-width: 768px)
+      margin-top: 26px
+
+    @media (min-width: 1300px)
+      margin-top: 42px
+
+.ordering__input
+  background: #fff
+  box-shadow: none
+  border-radius: 50%
+  border: 2px solid #AABBC6
+  width: 20px !important
+  height: 20px !important
+  // transition: all .2s ease
+
+  &.checked 
+    border: 2px solid #009FE3
+
+    .jq-radio__div
+      width: 9px
+      height: 9px
+      background: #009FE3
+      box-shadow: none
+      margin: 4px 0 0 4px
+      position: absolute
+      top: 0
+      // transition: all .2s ease
+      // animation-name: zoomIn
+      // animation-duration: .3s
+      // animation-fill-mode: forwards
+
+
+// оформление заказа, если зарегистрирован
+.ordering__customer
+  display: none
+
+.ordering__new-customer,
+.ordering__customer
+  .ordering__inputs
+    display: flex 
+    flex-direction: column
+    margin-top: 32px
+
+    @media (min-width: 700px)
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+
+    @media (min-width: 768px)
+      margin-top: 40px
+
+    .ordering__input-row 
+      display: flex
+      flex-direction: column
+      margin-top: 0
+      margin-bottom: 18px
+
+      @media (min-width: 700px)
+        margin-bottom: 20px
+        width: 48.5%
+
+      label
+        font-weight: 500
+        font-family: "MontserratMedium", sans-serif
+        font-size: 14px
+        line-height: 17px
+        color: $text-grey
+        padding-bottom: 3px
+      
+      input 
+        border: 1px solid #CBD3E2
+        border-radius: 6px
+        padding: 17px
+        font-size: 16px
+        line-height: 20px
+        color: #101C29
+
+.customer-row
+  display: flex
+  flex-direction: column
+  margin-top: 22px
+
+  @media (min-width: 768px)
+    flex-direction: row
+    margin-top: 26px
+
+  .customer-row__item
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    & + .customer-row__item
+      margin-top: 20px
+
+      @media (min-width: 768px)
+        margin-top: 0
+        margin-left: 47px
+
+    label
+      font-size: 16px
+      line-height: 20px
+      color: #101C29
+      //cursor: pointer
+
+      @media (min-width: 768px)
+        font-weight: 500
+        font-family: "MontserratMedium", sans-serif
+
+.social-row
+  margin-top: 10px
+
+  @media (min-width: 768px)
+    margin-top: 14px
+
+  @media (min-width: 1300px)
+    margin-top: 18px
+
+  p 
+    font-size: 14px
+    line-height: 17px
+    color: #101C29
+
+    @media (min-width: 768px)
+      font-size: 16px
+      line-height: 20px
+
+.ordering__social-list
+  display: flex
+  margin-top: 23px
+
+  @media (min-width: 768px)
+    margin-top: 20px
+
+  a 
+    width: 40px
+    height: 40px
+
+    & + a 
+      margin-left: 20px
+
+    svg
+      width: 100%
+      height: 100%
+
+.city-row
+  display: flex
+  flex-direction: column
+
+  label
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    font-size: 14px
+    line-height: 17px
+    color: $text-grey
+    padding-bottom: 3px
+
+  input 
+    border: 1px solid #CBD3E2
+    border-radius: 6px
+    padding: 17px
+    font-size: 16px
+    line-height: 20px
+    color: #101C29
+    position: relative
+    // max-width: 356px
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 18px
+      width: 19px
+      height: 19px
+      background-image: url(../../icons/pen.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      z-index: 2
+
+.ordering__delivery
+  margin-top: 18px
+
+  @media (min-width: 650px)
+    display: flex
+    justify-content: space-between
+
+  @media (min-width: 768px)
+    margin-top: 30px
+
+.ordering__delivery-item
+  position: relative
+
+  .ordering__label
+    min-height: 120px
+    border: 1px solid #CBD3E2
+    border-radius: 8px
+    padding: 18px 20px
+
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    color: $black
+    width: 100%
+    height: 100%
+
+    span
+      position: absolute
+      bottom: 20px
+      right: 120px
+
+  input[type='radio'] + label
+    align-items: flex-start
+
+  input[type='radio']:not(:disabled):checked + label
+    border-color: $blueMenu
+
+  @media (min-width: 650px)
+    width: 48.5%
+
+  &::before
+    content: ''
+    position: absolute
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+  &:first-child
+    &::before
+      width: 42px
+      height: 27px
+      bottom: 16px
+      right: 16px
+      background-image: url('../../icons/car.svg')
+
+  &:nth-child(2)
+    &::before
+      width: 32px
+      height: 34px
+      bottom: 15px
+      right: 20px
+      background-image: url('../../icons/box.svg')
+
+
+  & + .ordering__delivery-item
+    margin-top: 18px
+
+    @media (min-width: 650px)
+      margin-top: 0
+
+  .ordering__input
+    margin-right: 14px
+
+  .ordering__delivery-info 
+    h4 
+      font-weight: 500
+      font-family: "MontserratMedium", sans-serif
+      font-size: 16px
+      line-height: 20px
+      color: #101C29
+      margin-bottom: 6px
+
+    .ordering__delivery-date 
+      font-size: 16px
+      line-height: 20px
+      color: #B5B5B5
+
+.ordering__address
+  margin-top: 40px
+
+  @media (min-width: 768px)
+    margin-top: 50px
+
+  p
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    font-size: 16px
+    line-height: 20px
+    color: #101C29
+
+  span 
+    position: relative
+    
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      bottom: 1px
+      width: 100%
+      height: 1px
+      background-color: #101C29
+      transition: width 0.3s ease-out
+
+.ordering__address.registered
+  //display: none
+
+  .ordering__address-wrapper
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    align-items: flex-start
+
+    @media(min-width: 768px)
+      flex-direction: row
+
+  .ordering__address-link
+    font-size: 16px
+    line-height: 20px
+    color: $blueMenu
+    transition: color .3s
+    display: flex
+
+    & svg
+      align-self: center
+      margin-right: 6px
+    &:hover
+      color: #3BB5E9
+      transition: color .3s
+      & svg
+        fill:  #3BB5E9
+        path
+          fill: #3BB5E9
+
+  .ordering__address-inner
+    flex-direction: column
+
+    .input-row
+      width: 100%
+
+      .ordering__address-registered
+        display: flex
+        border: 1px solid #cbd3e2
+        border-radius: 8px
+        padding: 20px
+        .ordering__input
+          margin-right: 10px
+
+        .ordering__address-text
+          h4
+            font-weight: 500
+            font-family: "MontserratMedium", sans-serif
+            font-size: 16px
+            line-height: 20px
+            color: #101c29
+            margin-bottom: 6px
+          p
+            font-size: 16px
+            line-height: 20px
+            color: #B5B5B5
+
+.ordering__label.checked
+  border: 2px solid #009FE3 !important
+
+.ordering__address-inner
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-top: 20px
+
+  @media (min-width: 768px)
+    margin-top: 26px
+
+  .ordering__input-row
+    display: flex
+    align-items: center
+    gap: 10px
+    margin-bottom: 18px
+
+    label
+      font-weight: 500
+      font-family: "MontserratMedium", sans-serif
+      font-size: 14px
+      line-height: 17px
+      color: $text-grey
+
+    input, textarea
+      border: 1px solid #CBD3E2
+      border-radius: 6px
+      padding: 17px
+      font-size: 16px
+      line-height: 20px
+      color: #101C29
+
+    &.input-str
+      width: 100%
+
+      @media (min-width: 768px)
+        width: 74.5%
+
+    &.input-building
+      width: 100%
+
+      @media (min-width: 768px)
+        width: 22.7%
+
+    &.input-comment
+      width: 100%
+
+      textarea
+        padding: 12px
+        font-size: 14px
+        line-height: 17px
+        resize: none
+
+.ordering__delivery-services,
+.ordering__pickup-services
+  margin-top: 30px
+  //display: none
+
+  @media (min-width: 768px)
+    margin-top: 40px
+
+  p 
+    font-family: "MontserratMedium", sans-serif
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    color: #101C29
+    margin-bottom: 20px
+
+    @media (min-width: 768px)
+      margin-bottom: 24px
+
+.ordering__delivery-service 
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 20px
+  border: 1px solid #CBD3E2
+  border-radius: 8px
+  margin-bottom: 8px
+  cursor: pointer
+
+  @media (min-width: 768px)
+    padding: 20px 22px
+    margin-bottom: 16px
+
+  .ordering__delivery-img
+    width: 77px
+    display: flex
+    align-items: center
+    margin-right: 28px
+
+    @media (min-width: 1300px)
+      margin-right: 28px
+
+    @media (max-width: 767px)
+      display: none
+
+    img
+      object-fit: contain
+      max-width: 100%
+
+  .ordering__input 
+    margin-right: 10px
+
+    @media (min-width: 768px)
+      margin-right: 19px
+
+  .ordering__delivery-text
+    display: flex
+    flex-direction: column
+    max-width: 470px
+
+    h4
+      font-weight: 600
+      font-family: "MontserratMedium", sans-serif
+      font-size: 16px
+      line-height: 20px
+      color: #101C29
+      margin-bottom: 10px
+
+      @media (min-width: 768px)
+        margin-bottom: 8px
+
+    p 
+      font-size: 14px
+      line-height: 17px
+      color: $text-grey
+      font-weight: 400
+      font-family: "MontserratMedium", sans-serif
+
+    .delivery__price 
+      margin-top: auto
+      font-weight: 500
+      font-family: "MontserratMedium", sans-serif
+      font-size: 14px
+      line-height: 17px
+      color: #101C29
+
+.ordering__payment
+  display: flex
+  flex-direction: column
+
+  @media (min-width: 650px)
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+
+
+.ordering__payment-item 
+  margin-bottom: 8px
+  padding: 20px
+  display: flex
+  border: 1px solid #CBD3E2
+  border-radius: 8px
+  width: 100%
+  min-height: 76px
+
+  @media (min-width: 650px)
+    margin-bottom: 20px
+    min-height: 89px
+    width: 48.5%
+
+  p 
+    padding-top: 2px
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    font-size: 16px
+    line-height: 20px
+    color: #25252A
+    max-width: 225px
+
+.summary__container
+  //height: 1000px
+  margin: 0 auto
+  position: sticky
+  top: 100px
+
+
+.ordering__summary
+  padding: 30px 16px
+  background-color: #f5f5f5
+  height: max-content
+  margin: 30px -16px 0
+
+  @media(min-width: 768px)
+    margin: 50px -50px 0
+    padding-left: 50px
+    padding-right: 50px
+
+  @media(min-width: 1300px)
+    width: 100%
+    max-width: 430px
+    padding: 34px
+    background: #fff
+    border-radius: 14px
+    box-shadow: 0 5px 15px rgba(197, 221, 231, 0.57)
+    position: sticky
+    top: 100px
+    margin: 0 auto
+
+  h3 
+    font-weight: 600
+    font-family: "MontserratMedium", sans-serif
+    font-size: 20px
+    line-height: 24px
+    color: #25252A
+    padding-bottom: 15px
+
+  .ordering__summary-inner
+    padding: 20px 0
+    border-bottom: 1px solid #E2E2E2
+    border-top: 1px solid #E2E2E2
+
+  .ordering__summary-total
+    font-weight: 600
+    font-family: "MontserratMedium", sans-serif
+    font-size: 20px
+    line-height: 24px
+    color: #25252A
+    display: flex
+    justify-content: space-between
+    padding: 20px 0
+
+    span
+      & + span
+        margin-left: 4px
+
+  .ordering__summary-row 
+    display: flex
+    justify-content: space-between
+
+    & + .ordering__summary-row
+      margin-top: 12px
+
+    &.summary-discount
+      p
+        &:last-child
+          font-size: 16px
+          line-height: 20px
+          color: #EC0000
+
+    p 
+      font-size: 16px
+      line-height: 20px
+      color: #000000
+
+  #orderBtn
+    background: #009FE3
+    //opacity: 0.4
+    border-radius: 8px
+    display: block
+    padding: 12px
+    width: 100%
+    color: #FFFFFF
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+
+  .ordering__policy
+    font-weight: 500
+    font-family: "MontserratMedium", sans-serif
+    font-size: 14px
+    line-height: 17px
+    color: #CBD3E2
+    margin-top: 20px
+
+    a 
+      position: relative
+      display: inline-block
+      margin-right: 3px
+
+      &:hover, &:focus 
+        &::after 
+          animation-duration: .45s
+          animation-name: underline
+          animation-fill-mode: forwards
+
+      &::after 
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        bottom: 2px
+        width: 100%
+        height: 1px
+        background-color: #CBD3E2
+        transition: width 0.3s ease-out
+
+.ordering__address-popup
+  padding: 30px 16px
+  & .ordering__wrapper
+    max-width: 667px
+    margin: 0 auto
+    .address-popup__form
+      .address-popup__buttons
+        margin: 0 auto
+        display: flex
+        button:first-child
+          border-radius: 6px
+          margin-right: 12px
+        button:last-child
+          color: #009fe3
+          background-color: #fff
+          border: 1px solid #009fe3
+          padding: 10px 36px
+          transition: color,background-color .3s
+          border-radius: 6px
+          &:hover
+            color: #fff
+            background-color: #009fe3
+
+
+.ordering__successful-wrap
+  display: flex
+  flex-direction: column
+  margin: 0 auto
+  text-align: center
+
+  img
+    width: 62px
+    height: 62px
+    align-self: center
+    margin-bottom: 20px
+
+  p:first-of-type
+    font-weight: 500
+    font-size: 30px
+    line-height: 37px
+    color: #25252A
+    margin-bottom: 20px
+
+  p:last-of-type
+    line-height: 140%
+    font-size: 16px
+    text-align: center
+    color: #101C29
+    align-self: center
+
+  a
+    display: block
+    width: fit-content
+    align-self: center
+    margin-top: 40px
+
+.ordering__successful-order
+  display: none
+
+// Страница заказа юр.лица
+.entity-info
+  margin-top: 40px
+
+  .input-wrapper
+    //max-width: 690px
+    display: flex
+    flex-direction: column
+
+    @media (min-width: 768px)
+      flex-direction: row
+
+      .input-row
+        width: 328px
+
+      .input-row:first-of-type
+        margin-right: 11px
+
+    @media (min-width: 1300px)
+      justify-content: space-between
+
+      .input-row
+        width: 328px
+
+  .input-row
+    margin-bottom: 20px
+    max-width: 667px
+
+    @media (min-width: 1300px)
+      max-width: 690px
+
+    label
+      display: flex
+      flex-direction: column
+
+
+@keyframes zoomIn 
+  from 
+    opacity: 0
+    transform: scale3d(0.3, 0.3, 0.3)
+
+  50% 
+    opacity: 1

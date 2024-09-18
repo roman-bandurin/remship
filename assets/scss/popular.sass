@@ -1,0 +1,111 @@
+@import "base/variables"
+  
+.popular 
+  margin-top: 40px
+  padding-bottom: 50px
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  @media (min-width: 768px)
+    margin-top: 50px
+
+  @media (min-width: 1300px)
+    margin-top: 60px
+    padding-bottom: 0
+
+.popular__slider 
+  @media (min-width: 1300px)
+    min-height: 490px
+
+.product-slider
+  overflow: visible
+  position: relative
+
+  @media (min-width: 768px)
+    margin: 0
+    padding-left: 0
+
+  @media (min-width: 1300px)
+    overflow: visible
+
+.product-slider__list
+  .product-slider__item 
+    width: 200px
+    box-sizing: border-box
+
+    @media (min-width: 768px)
+      width: 316px
+      width: 41%
+      max-width: 350px
+      
+    @media (min-width: 950px)
+      width: 32%
+      margin-bottom: 23px
+
+    @media (min-width: 1300px)
+      width: 316px
+
+    &:hover
+      @media (min-width: 1300px)
+        margin: -20px 0 -60px
+
+.more-link
+  display: none
+  width: 180px
+  margin: 0 auto
+  padding: 12px 30px
+  background-color: #FFFFFF
+  border: 1px solid transparent
+  box-sizing: border-box
+  border-radius: 39px
+  transition: all .3s ease
+  filter: drop-shadow(0px 8px 13px rgba(0, 0, 0, 0.09))
+
+  @media (min-width: 768px) and (max-width: 1299px)
+    display: block
+
+  &:hover 
+    border: 1px solid #4198F7
+
+    span::after 
+      right: -5px
+
+  span
+    position: relative 
+    padding-right: 20px
+    font-size: 16px
+    line-height: 20px
+    text-align: center
+    color: $black
+
+    &::after 
+      content: ''
+      position: absolute
+      transition: all .3s ease
+      top: 2px
+      right: 0
+      width: 16px
+      height: 16px
+      background-position: 100%
+      background-image: url(../icons/arrow-black.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+
+  &.news__link
+    display: block
+    width: max-content
+    margin-top: 26px
+
+    @media (min-width: 768px)
+      display: none
+
+    span 
+      padding-right: 28px
+
+      &::after 
+        transform: rotate(90deg)
+        right: 0

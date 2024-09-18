@@ -1,0 +1,508 @@
+.main__cart
+  margin-top: 30px
+
+  @media (min-width: 768px)
+    margin-top: 24px
+
+  @media (min-width: 1300px)
+    margin-top: 40px
+
+.title__wrapper
+  display: flex
+  gap: 8px
+  align-items: baseline
+
+  @media (min-width: 768px)
+    gap: 14px
+
+  @media (min-width: 1300px)
+    gap: 18px
+
+  h1
+    margin-bottom: 0
+
+  .cart__total-count
+    font-weight: 400
+    font-size: 13px
+    color: #000
+    opacity: 0.4
+    line-height: 16px
+
+    @media (min-width: 1300px)
+      font-size: 16px
+      line-height: 20px
+
+.cart
+  margin-top: 13px
+
+  @media (min-width: 768px)
+    margin-top: 59px
+
+  @media (min-width: 1300px)
+    margin-top: 40px
+    align-items: center
+    display: flex
+    gap: 40px
+
+.cart__list
+  @media (min-width: 1300px)
+    flex-grow: 1
+
+.cart-item
+  display: flex
+  margin-left: -16px
+  margin-right: -16px
+  padding: 20px 16px
+  border-top: 1px solid $border-grey
+  justify-content: space-between
+  @media (min-width: 768px)
+    margin: 0
+    border-top: none
+    border-bottom: 1px solid $border-grey
+    padding: 20px 16px 40px 16px
+
+  @media (min-width: 1300px)
+    width: 100%
+    flex-grow: 2
+
+  & .cart-item__img
+    max-width: 80px
+    max-height: 80px
+    min-height: 80px
+    min-width: 80px
+
+    img
+      display: block
+      width: 100%
+      height: 100%
+      object-fit: contain
+
+  .cart-item__delete-button
+    align-self: flex-end
+    margin-left: 16px
+    cursor: pointer
+    svg
+      pointer-events: none
+
+    @media (min-width: 768px)
+      margin-left: 60px
+      align-self: flex-start
+
+    @media (min-width: 1300px)
+      margin-left: 45px
+
+.cart-item__inner
+  display: flex
+  flex-direction: column
+  margin-left: 18px
+  flex-grow: 1
+
+  @media (min-width: 768px)
+    flex-direction: row
+    justify-content: space-around
+
+  & .cart-item__price_wrapper
+    display: flex
+    flex-direction: row
+    gap: 8px
+    width: 152px
+
+    @media (min-width: 768px)
+      flex-direction: column
+      order: 1
+      align-items: flex-end
+
+    input
+      color: $black
+      font-weight: 600
+      font-size: 16px
+      line-height: 20px
+
+      @media (min-width: 768px)
+        font-size: 22px
+        line-height: 27px
+
+    p:last-child
+      color: $grey-2
+      font-weight: 500
+      font-size: 12px
+      line-height: 15px
+      text-decoration: line-through
+
+
+      @media (min-width: 768px)
+        font-size: 14px
+        line-height: 27px
+
+      @media (min-width: 1300px)
+        align-self: flex-end
+
+  & .cart-item__name-wrapper
+    width: 205px
+    @media (min-width: 768px)
+      width: 176px
+    @media (min-width: 1300px)
+      width: 286px
+    & h3
+      font-weight: 500
+      font-family: "MontserratMedium", sans-serif
+      font-size: 14px
+      line-height: 17px
+      color: $black
+      margin-top: 16px
+      margin-bottom: 12px
+
+      @media (min-width: 768px)
+        margin-top: 0
+        margin-bottom: 0
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+
+    & p
+      font-size: 12px
+      line-height: 15px
+      color: $grey-2
+
+      @media (min-width: 768px)
+        margin-top: 6px
+        font-size: 14px
+        line-height: 17px
+
+  & .cart-item__quantity-wrapper
+    display: flex
+    flex-direction: column
+    width: 200px
+    align-items: center
+
+    @media (min-width: 768px)
+      margin-left: 40px
+
+    & .cart-item__quantity-block
+      display: flex
+      width: 98px
+      border-radius: 8px
+      border: 1px solid $border-grey
+      gap: 16px
+      justify-content: space-between
+      align-items: center
+      padding: 5px 16px
+      margin-top: 16px
+
+      @media (min-width: 768px)
+        margin-top: 0
+
+      & button
+          svg
+            vertical-align: middle
+
+      & .cart-item__quantity
+        width: 100%
+        border: none
+        text-align: center
+        font-weight: 600
+        font-size: 12px
+        color: $black
+        align-self: center
+        -moz-appearance: textfield
+        @media (min-width: 768px)
+          font-size: 16px
+
+      @media (min-width: 768px)
+        width: 122px
+        padding: 12px 14px
+
+    & .cart-item__one-price
+      display: none
+      align-self: center
+      color: $black
+      font-size: 16px
+      font-weight: 600
+      line-height: 19px
+      opacity: 0.8
+
+      & span
+        font-weight: 400
+
+      @media (min-width: 768px)
+        margin-top: 6px
+        display: block
+
+    .minus, .plus
+      cursor: pointer
+      min-width: 10px
+      height: 100%
+
+      &::before
+        content: ''
+        display: block
+        height: 1px
+        width: 11px
+        background-color: black
+        top: 0
+        left: calc(50% - 5px)
+        position: relative
+
+    .plus
+      &::after
+        content: ''
+        display: block
+        height: 1px
+        width: 11px
+        background-color: black
+        top: -1px
+        left: calc(50% - 5px)
+        position: relative
+        transform: rotate(90deg)
+        
+.cart__order-wrapper
+  margin-left: -16px
+  margin-right: -16px
+  padding: 20px 16px 
+  background-color: $bg-grey
+
+  @media (min-width: 768px)
+    background: none
+    margin: 0
+    padding: 0
+    margin-top: 40px
+
+  @media (min-width: 1300px)
+    margin-top: 0
+    width: 430px
+
+  & .cart-order
+      padding: 34px 20px 20px 20px
+      background-color: #ffffff
+      border-radius: 14px
+      box-shadow: 0 3px 13px rgba(0, 0, 0, 0.08)
+      max-width: 430px
+      margin: 0 auto
+
+      @media (min-width: 768px)
+        padding: 34px
+
+      @media (min-width: 1300px)
+        margin: 0
+
+      & .cart-order__title
+        font-weight: 600
+        font-family: "MontserratMedium", sans-serif
+        font-size: 20px
+        line-height: 24px
+        color: $black
+        padding-bottom: 15px
+        margin-bottom: 20px
+        border-bottom: 1px solid $grey-2
+
+      & .cart-order__count, .cart-order__weight, .cart-order__discount
+        display: flex
+        justify-content: space-between
+        margin-bottom: 12px
+        &.hidden
+          display: none
+
+        & .discount
+          color: $red
+
+      & .cart-order__total
+        display: flex
+        justify-content: space-between
+        font-weight: 600
+        font-family: 'MontserratSemibold', sans-serif
+        font-size: 20px
+        line-height: 24px
+        padding-top: 20px
+        margin-top: 20px
+        margin-bottom: 20px
+        border-top: 1px solid $grey-2
+
+      & .cart-order__promocode
+        margin-top: 10px
+        display: flex
+        flex-direction: column
+        gap: 5px
+
+        &__main
+          margin-top: 10px
+          display: flex
+          flex-direction: column
+          gap: 5px
+
+          .input-row
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            border: 1px solid #CBD3E2
+            border-radius: 8px
+            padding: 5px
+            color: #423D48
+
+            &:hover
+              border: 1px solid #5D7687
+
+            &_focus
+              border: 1px solid $blueHover
+
+            .promocode-input
+              border: none
+              outline: none
+              max-width: 50%
+
+            .promocode-btn
+              display: block
+              width: max-content
+              height: 30px
+              background-color: #009FE3
+              padding: 2px 10px
+              color: #fff
+              border-radius: 5px
+
+          .promocode-reset
+            display: none
+            color: #009FE3
+            margin-top: 5px
+
+            &_show
+              display: block
+
+          .promocode-help-block
+            margin-top: 5px
+            color: #CF4949
+
+      & .cart-order__button_buy
+        display: block
+        color: #ffffff
+        background-color: $blueMenu
+        border-radius: 8px
+        width: 100%
+        padding: 12px 0
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+        transition: background-color 0.3s
+
+      & .cart-order__button_buy:hover
+        transition: background-color 0.3s
+        background-color: $blueHover
+
+      & .cart-order__button_fast-buy
+        margin-top: 18px
+        color: $blueMenu
+        background-color: #ffffff
+        border-radius: 8px
+        border: 1px solid $blueMenu
+        width: 100%
+        padding: 10px 0
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        display: none
+        transition: color, background-color 0.3s
+
+        &:hover
+          transition: color, background-color 0.3s
+          color: white
+          background-color: $blueMenu
+        @media (min-width: 1300px)
+          display: block
+
+      & .cart-order__text
+        margin-top: 12px
+        font-size: 12px
+        line-height: 130%
+        color: $text-grey
+        display: none
+
+        @media (min-width: 1300px)
+          display: block
+
+.fast-buy__popup-wrap
+  max-width: 420px
+  padding: 42px 24px 24px
+  margin: auto 0
+  @media (min-width: 768px)
+    padding: 40px 46px 46px
+  .fast-buy__popup-content
+    h3
+      font-weight: 600
+      font-size: 20px
+      line-height: 24px
+      text-align: center
+      margin-bottom: 18px
+    p
+      font-size: 14px
+      line-height: 18px
+      color: $text-grey
+    form
+      margin-top: 25px
+      .input-row.error
+        label
+          color: $red
+        & input,textarea
+          border: 1px solid $red
+        .help-block
+          display: block
+      .input-row
+        margin-bottom: 10px
+        & .help-block
+          display: none
+        input, textarea
+          width: 100%
+          border: 1px solid #CBD3E2
+          border-radius: 8px
+          margin-top: 4px
+          padding: 16px 30px
+          font-size: 16px
+          line-height: 18px
+          color: #423D48
+          &:hover
+            border: 1px solid #5D7687
+      label
+        font-size: 14px
+        line-height: 17px
+        color: $text-grey
+        display: block
+
+      p
+        font-size: 13px
+        line-height: 16px
+        color: #636363
+        margin-top: 20px
+
+        a
+          position: relative
+          display: inline-block
+
+          &::before
+            content: ''
+            position: absolute
+            bottom: 1px
+            left: 0
+            width: 100%
+            height: 1px
+            background-color: #636363
+
+      button
+        display: block
+        margin-top: 20px
+        text-align: center
+        background-color: #009FE3
+        border-radius: 8px
+        color: #fff
+        padding: 17px
+        width: 100%
+        cursor: pointer
+        transition: all .3s ease
+
+        &:hover
+          background-color: #3BB5E9
+
+.main__cart
+  .others
+    & .others__slider
+      & .others__list
+        flex-wrap: nowrap
+

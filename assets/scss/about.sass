@@ -1,0 +1,340 @@
+.about
+  &__title
+    font-family: 'MontserratMedium', sans-serif
+    font-style: normal
+    font-weight: 700
+    font-size: 20px
+    line-height: 24px
+    margin-bottom: 20px
+
+    @media screen and (min-width: 768px)
+      font-size: 24px
+      line-height: 29px
+
+    @media screen and (min-width: 1300px)
+      font-size: 30px
+      line-height: 37px
+
+  &-header
+    margin: 30px 0
+
+    @media screen and (min-width: 1300px)
+      margin: 45px 0
+
+    &__content
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 30px
+
+      @media screen and (min-width: 1300px)
+        margin: 0 auto
+        flex-wrap: nowrap
+        flex: 1
+
+      &-title
+        font-family: 'Montserrat', sans-serif
+        font-style: normal
+        font-weight: 500
+        font-size: 22px
+        line-height: 150%
+        color: #000000
+
+      &-text
+        font-family: 'Montserrat', sans-serif
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 160%
+        color: #25252A
+
+        @media screen and (min-width: 1300px)
+          flex-wrap: nowrap
+          width: 50%
+
+      &-title + &-text
+        margin-top: 20px
+
+
+  &-photo
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    margin: 80px 0
+    background-color: #CCECF9
+    padding: 40px 0
+
+    @media screen and (min-width: 768px)
+      padding: 50px 0
+
+    @media screen and (min-width: 1300px)
+      margin-bottom: 120px
+      padding: 90px 0
+
+    &__carousel
+      --gap: 20px
+      display: flex
+      align-items: flex-end
+      overflow: hidden
+      user-select: none
+      gap: var(--gap)
+
+      &:last-child
+        .about-photo__carousel-inner
+          align-items: flex-start
+          animation-direction: reverse
+
+      & + &
+        margin-top: 20px
+
+      &-img
+        max-height: 110px
+        max-width: 110px
+        width: 100%
+        height: 100%
+
+        &:nth-child(even)
+          height: 110px
+          width: 80px
+
+          @media screen and (min-width: 768px)
+            height: 300px
+            width: 150px
+
+          @media screen and (min-width: 1300px)
+            height: 400px
+            width: 300px
+
+        @media screen and (min-width: 768px)
+          max-width: 200px
+          max-height: 200px
+
+        @media screen and (min-width: 1300px)
+          max-width: 380px
+          max-height: 400px
+
+      &-inner
+        flex-shrink: 0
+        display: flex
+        justify-content: space-around
+        min-width: 100%
+        gap: var(--gap)
+        animation: marquee 60s linear infinite
+        align-items: flex-end
+
+  &-history
+    margin: 80px 0
+
+    @media screen and (min-width: 1300px)
+      margin: 120px 0
+
+    &__slider
+      position: relative
+      background-image: url("../images/about-bg.png")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: top
+      padding-bottom: 20px
+
+      @media screen and (min-width: 768px)
+        padding-bottom: 40px
+        background-size: contain
+
+      &::after, &::before
+        content: ""
+        position: absolute
+        z-index: 2
+        top: 0
+        width: 75%
+        height: 100%
+        background: linear-gradient(269.34deg, #FFFFFF 44.2%, rgba(255, 255, 255, 0) 99.39%)
+
+      &::after
+        right: 0
+        transform: translateX(50%)
+
+      &::before
+        left: 0
+        transform: matrix(-1, 0, 0, 1, 0, 0) translateX(50%)
+
+    &__slide
+      opacity: .2
+      //max-width: 480px
+
+      &.swiper-slide-active
+        opacity: 1
+
+      &-title
+        font-family: 'Montserrat', sans-serif
+        font-style: normal
+        font-weight: 600
+        font-size: 50px
+        line-height: 62px
+
+        @media screen and (min-width: 768px)
+          font-size: 80.78px
+          line-height: 98px
+
+        @media screen and (min-width: 1300px)
+          font-size: 90.78px
+          line-height: 111px
+
+      &-text
+        font-family: 'Montserrat', sans-serif
+        font-style: normal
+        font-weight: 400
+        color: #25252A
+        font-size: 14px
+        line-height: 160%
+
+        @media screen and (min-width: 768px)
+          font-size: 16px
+
+    .swiper-slide-active &
+      &__slide-title
+        color: #009FE3
+
+    &__pagination
+      margin: 30px -16px
+      padding-bottom: 50px
+      display: flex
+      justify-content: space-between
+      overflow-y: hidden
+      overflow-x: auto
+
+      @media screen and (min-width: 768px)
+        margin: 40px 0
+
+    &__bullet
+      cursor: pointer
+      flex: 1
+      position: relative
+      padding: 0 10px
+
+      font-family: 'Montserrat', sans-serif
+      font-weight: 500
+      font-size: 14px
+      color: rgba(37, 37, 42, 0.2)
+      text-align: center
+      transition: color .6s ease, font-weight .4s ease
+
+
+      &::after, &::before
+        content: ""
+        position: absolute
+
+      &::before
+        bottom: -25px
+        left: 25%
+        width: 13px
+        height: 13px
+        border-radius: 50%
+        background-color: #D3D3D4
+        z-index: 3
+        transition: background-color .4s ease, box-shadow .4s ease
+
+      &::after
+        border-bottom: 2px solid rgba(37, 37, 42, 0.1)
+        bottom: -20px
+        left: 0
+        width: 100%
+        z-index: 2
+        transition: border-color .4s ease
+
+      &_active
+        color: #009FE3
+        font-weight: 600
+        &::before
+          background-color: #009FE3
+          box-shadow: 0 0 1px 10px rgba(0, 159, 227, 0.20)
+        &::after
+          border-color: #009FE3
+
+      @media screen and (min-width: 768px)
+        font-size: 24px
+        &::before
+          bottom: -37px
+          width: 17px
+          height: 17px
+        &::after
+          bottom: -30px
+
+      @media screen and (min-width: 1280px)
+        font-size: 28px
+
+    &__container
+      margin: 50px auto
+      position: relative
+      width: 100%
+
+  &-advantages
+    padding: 50px 0
+    background-color: #CCECF9
+
+    &__photo
+      margin-top: 60px
+      display: none
+
+      &-img
+        width: 100%
+        height: 100%
+
+      @media screen and (min-width: 1300px)
+        display: block
+        width: 380px
+        height: 225px
+
+    &__list
+      margin-top: 20px
+
+      @media screen and (min-width: 1300px)
+        margin-top: 30px
+
+      @media screen and (min-width: 1300px)
+        margin-top: 18px
+        max-width: 880px
+
+      &-item
+        padding: 20px 0
+        font-family: 'Montserrat', sans-serif
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 21px
+        color: #25252A
+
+        & + &
+          border-top: 1px solid rgba(0, 0, 0, 0.7)
+
+        &:first-child
+          border-top: 1px solid rgba(0, 0, 0, 0.7)
+
+        &:last-child
+          border-bottom: 1px solid rgba(0, 0, 0, 0.7)
+
+        @media screen and (min-width: 1300px)
+          padding: 35px 0
+          font-size: 24px
+          line-height: 29px
+
+  &__container
+    @media screen and (min-width: 1300px)
+      display: flex
+      justify-content: space-between
+      gap: 100px
+
+
+@keyframes marquee
+  from
+    transform: translateX(0)
+
+  to
+    transform: translateX(calc(-100% - var(--gap)))
+
+@keyframes marqueeReverse
+  from
+    transform: translateX(0)
+
+  to
+    transform: translateX(calc(100% + var(--gap)))

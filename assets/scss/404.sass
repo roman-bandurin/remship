@@ -1,0 +1,97 @@
+@import "base/variables"
+  
+.error-404
+  display: flex
+  flex-direction: column
+  position: relative
+  padding-bottom: 185px
+  margin-top: 140px
+  flex: 1
+
+  @media (min-width: 768px)
+    padding-bottom: 103px
+    margin-bottom: 0
+
+  @media (min-width: 1300px)
+    margin-bottom: 0
+    //margin-top: 89px
+
+  &::after 
+    content: ''
+    position: absolute
+    z-index: -1
+    width: 100%
+    height: 258px
+    background-image: url(../images/404/404-bg-mobile.png)
+    background-size: cover
+    background-repeat: no-repeat
+    right: 0
+    bottom: 0
+
+    @media (min-width: 480px)
+      height: 340px
+
+    @media (min-width: 630px)
+      height: 400px
+
+    @media (min-width: 768px)
+      background-image: url(../images/404/404-bg.png)
+      height: 100%
+      background-size: 100%
+      background-position: right
+
+    @media (min-width: 1300px)
+      background-image: url(../images/404/404-bg.png)
+      height: 130%
+      background-size: 100%
+      background-position: right
+
+
+  .container
+    margin: 0
+
+  .error-404__content
+    @media (min-width: 768px)
+      width: 413px
+
+    img 
+      display: block
+      width: 60%
+
+    h1 
+      font-size: 20px
+      line-height: 24px
+      color: #101C29
+      font-weight: 700
+      font-family: "MontserratMedium"
+      margin-bottom: 10px
+
+      @media (min-width: 768px)
+        font-size: 22px
+        line-height: 27px
+
+    p 
+      font-size: 16px
+      line-height: 20px
+      color: #101C29
+      margin-bottom: 26px
+
+      @media (min-width: 768px)
+        margin-bottom: 23px
+
+    a 
+      display: inline-block
+      padding: 12px 24px
+      background-color: #3BB5E9
+      border-radius: 8px
+      font-weight: 500
+      font-family: "MontserratMedium"
+      font-size: 16px
+      line-height: 20px
+      color: #FFFFFF
+      transition: all .3s ease
+
+
+      &:hover
+        background-color: $blueMenu
+

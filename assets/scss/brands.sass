@@ -1,0 +1,56 @@
+.brands
+  padding-top: 50px
+  padding-bottom: 50px
+
+  @media (min-width: 768px)
+    padding-top: 60px
+    padding-bottom: 20px
+  
+
+.brands__list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center 
+  max-width: 535px
+  margin: 0 auto
+
+  @media (min-width: 768px)
+    max-width: 1400px
+  //   margin-top: 45px
+
+  li 
+    width: 69px
+    width: 13%
+    height: auto
+    height: 36px
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    margin: 0 10px 20px
+    transition: all .2s ease
+    cursor: pointer
+
+    @media (min-width: 768px)
+      width: 17%
+      height: 70px
+      margin-bottom: 30px
+
+    @media (min-width: 1300px)
+      width: 176px
+      height: 91px
+      margin: 0 33px 70px
+      opacity: .3
+
+    &:hover
+      @media (min-width: 1300px)
+        opacity: 1
+
+
+    img 
+      object-fit: contain 
+      width: 100%
+      height: 100%
+      margin: auto
+      display: block
+      vertical-align: center
+      align-items: center

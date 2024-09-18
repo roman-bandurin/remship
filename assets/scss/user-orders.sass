@@ -1,0 +1,261 @@
+.user-orders
+  padding-bottom: 76px
+
+  @media (min-width: 768px)
+    margin-top: 24px
+
+    & .user-account__wrapper
+      width: 100%
+
+      @media (min-width: 1300px)
+        width: auto
+
+      & .tablet-tabs__list
+        width: inherit
+
+  h1
+    display: none
+
+    @media (min-width: 768px)
+      display: block
+      margin-bottom: 30px
+
+
+.arrow-down
+  position: relative
+
+  &::after
+    content: url("../icons/arrow-down.svg")
+    position: absolute
+    margin-left: 5px
+
+.orders-empty
+  display: none
+  margin-top: 30px
+
+  @media (min-width: 1300px)
+    max-width: 778px
+    width: 100%
+    box-shadow: 0 5px 15px rgba(197, 221, 231, 0.57)
+    border-radius: 18px
+  h2
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+
+    @media (min-width: 1300px)
+      display: none
+      font-weight: 600
+      font-size: 20px
+      line-height: 24px
+      margin-left: 0
+
+  .orders-empty__wrapper
+    display: flex
+    flex-direction: column
+    text-align: center
+    img
+      object-fit: none
+      margin-top: 53px
+      margin-bottom: 30px
+    p
+      font-weight: 500
+      font-size: 16px
+      line-height: 140%
+      color: #25252A
+      max-width: 414px
+      margin: 0 auto
+
+    a
+      display: block
+      align-self: center
+      width: fit-content
+      margin-top: 22px
+
+
+.orders
+  overflow-x: auto
+  position: relative
+  margin-top: 30px
+
+  @media (min-width: 768px)
+    margin-top: 40px
+
+  @media (min-width: 1300px)
+    overflow-x: unset
+    margin-top: 28px
+    max-width: 979px
+
+  .order-item
+    transition: max-height .35s ease
+    &__header
+      &-accordion-button
+        margin-left: 50px
+        & .order-item__header-accordion-button-arrow
+          pointer-events: none
+          transition: transform .35s
+    &.opened
+      & .order-item__header-accordion-button-arrow
+        transform: rotate(180deg)
+        transition: transform .35s
+    &__info
+
+
+  h2
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+
+    @media (min-width: 1300px)
+      font-weight: 600
+      font-size: 20px
+      line-height: 24px
+      margin-left: 0
+
+  &__subtitle
+    margin: 20px 0
+
+  .orders__wrapper
+    @media (min-width: 1300px)
+      padding: 0
+      width: 100%
+
+    .orders__header
+      @media screen and (max-width: 1299px)
+        display: none
+
+      margin-top: 31px
+      display: flex
+      padding: 18px 25px 20px 24px
+      border: 1px solid $border-grey-2
+      box-shadow: 3px 7px 13px rgba(191, 191, 191, 0.39)
+      border-radius: 8px
+      background: $bg-light-blue
+      justify-content: space-between
+      margin-bottom: 4px
+
+      @media (min-width: 1300px)
+        width: 100%
+        margin-bottom: 13px
+
+      p
+        width: 20%
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        color: #7E7E92
+
+        @media (min-width: 1300px)
+          font-size: 16px
+          line-height: 20px
+
+.fade
+  position: relative
+  margin: 0 -16px
+
+  @media (min-width: 668px)
+    &.right::after, &.right::before,
+    &.left::after, &.left::before
+      display: none
+
+  @media (min-width: 1300px)
+    margin: 0
+    max-width: 979px
+    width: 100%
+
+.fade.right::before
+  content: url("../icons/right-arrow-orders.svg")
+  position: absolute
+  z-index: 1
+  top: 50%
+  right: 0
+
+.fade.left::before
+  content: url("../icons/right-arrow-orders.svg")
+  transform: rotate(180deg)
+  position: absolute
+  z-index: 1
+  top: 50%
+  left: 0
+
+.fade.right::after
+  content: ''
+  position: absolute
+  background: linear-gradient(270deg,#fff 0,rgba(255,255,255,0) 103.28%)
+  height: 100%
+  width: 15%
+  top: 0
+  right: 0
+
+.fade.left::after
+  content: ''
+  position: absolute
+  background: linear-gradient(-270deg,#fff 0,rgba(255,255,255,0) 103.28%)
+  height: 100%
+  width: 15%
+  top: 0
+  left: 0
+
+.orders-pagination
+  text-align: center
+
+
+  @media (min-width: 1300px)
+    width: 100%
+
+  .orders-pagination__list
+    display: none
+
+    @media (min-width: 1300px)
+      margin-top: 60px
+      max-width: 979px
+      display: flex
+      justify-content: end
+      width: 100%
+
+      a
+        width: 32px
+        height: 32px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        transition: background-color .35s ease-out
+        &:hover
+          transition: background-color .35s ease-in
+          background-color: #009FE319
+
+      .prev
+        border: 1px solid #e2e2e2
+        svg
+          transform: rotate(180deg)
+      .next
+        border: 1px solid #e2e2e2
+      .active
+        background-color: #009FE319
+
+  button
+    margin-top: 30px
+    font-size: 16px
+    line-height: 20px
+    padding: 12px 24px
+    border-radius: 39px
+    box-shadow: 0 14px 36px rgba(231, 240, 248, 0.86)
+
+    svg
+      vertical-align: bottom
+
+    @media (min-width: 1300px)
+      display: none
+
+
+.user-orders__wrapper
+  @media (min-width: 1300px)
+    display: flex
+
+  .user-account__aside
+    display: none
+
+    @media (min-width: 1300px)
+      display: block
+      margin-right: 66px
